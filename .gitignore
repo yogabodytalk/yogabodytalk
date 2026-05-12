@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+dist/
+.vercel/
+next-env.d.ts
+
+# Build metadata
+tsconfig.tsbuildinfo
+
+# Test output
+test-results/
+playwright-report/
+
+# Environment
+.env*
+!.env.example
+
+# Logs and local OS files
+*.log
+.DS_Store

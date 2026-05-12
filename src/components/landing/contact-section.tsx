@@ -1,0 +1,30 @@
+import Image from "next/image";
+import { LeadForm } from "./lead-form";
+import { eyebrow, heading, section, shell } from "./shared";
+
+export function ContactSection() {
+  return (
+    <section className={`${section} ${shell} grid items-center gap-10 rounded-xl bg-surface p-8 text-ink lg:grid-cols-[1fr_0.8fr]`} id="contact" aria-labelledby="contact-title">
+      <div>
+        <p className={eyebrow}>Tư vấn lộ trình</p>
+        <h2 id="contact-title" className={heading}>
+          Bắt đầu bằng việc hiểu đúng cơ thể của bạn.
+        </h2>
+        <p className="mt-4 text-muted">
+          Gửi thông tin để được tư vấn lộ trình phù hợp: 4 tuần nền tảng, 30 ngày chỉnh dáng hoặc 90 ngày chuyển hóa toàn diện.
+        </p>
+        <div className="mt-7 rounded-xl bg-white/80 p-5 text-ink shadow-soft">
+          <LeadForm />
+        </div>
+      </div>
+      <Image
+        className="aspect-[9/16] w-full rounded-xl object-cover shadow-soft"
+        src="/landing-assets/yoga-phong-thai-landing-03-cta.webp"
+        alt="Tư vấn Yoga Phong Thái cùng Master Thu Nhanh"
+        width={1080}
+        height={1920}
+        loading="eager"
+      />
+    </section>
+  );
+}
