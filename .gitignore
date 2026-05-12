@@ -23,3 +23,4 @@ playwright-report/
 *.log
 .DS_Store
 .vercel
+.gitnexus
