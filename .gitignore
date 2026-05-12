@@ -22,3 +22,4 @@ playwright-report/
 # Logs and local OS files
 *.log
 .DS_Store
+.vercel
