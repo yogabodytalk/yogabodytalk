@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yogaphongthai.vercel.app";
+const socialImage = "/og/yoga-phong-thai-sale-thumbnail.png";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: "Yoga Phong Thái | BODY TALK by Master Thu Nhanh",
   description:
     "Khóa học Yoga Phong Thái giúp phụ nữ chỉnh dáng, mở hơi thở, định tuyến trục cơ thể và xây dựng phong thái tự tin từ bên trong.",
@@ -10,7 +13,21 @@ export const metadata: Metadata = {
     title: "Yoga Phong Thái | BODY TALK",
     description:
       "Đẹp từ trục cơ thể. Sang từ phong thái. Lộ trình yoga chỉnh dáng, video học tập và tư vấn cá nhân cùng Master Thu Nhanh.",
-    images: ["/anh-ghep/yoga-phong-thai-mau1-goc2.png"],
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: "Yoga Phong Thái BODY TALK",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yoga Phong Thái | BODY TALK",
+    description:
+      "Đẹp từ trục cơ thể. Sang từ phong thái. Lộ trình yoga chỉnh dáng, video học tập và tư vấn cá nhân cùng Master Thu Nhanh.",
+    images: [socialImage],
   },
   icons: {
     icon: "/brand-assets/body-talk-symbol-dark.svg",
