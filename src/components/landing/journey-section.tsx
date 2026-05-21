@@ -5,7 +5,7 @@ type PrincipleIconName = (typeof bodyMachinePrinciples)[number]["icon"];
 function PrincipleIcon({ name }: { name: PrincipleIconName }) {
   if (name === "fuel") {
     return (
-      <svg aria-hidden="true" className="h-8 w-8" fill="none" viewBox="0 0 48 48">
+      <svg aria-hidden="true" className="h-8 w-8 lg:h-10 lg:w-10" fill="none" viewBox="0 0 48 48">
         <path d="M24 7c6.2 5.8 9.4 11.6 9.4 17.2 0 6-3.8 10.2-9.4 10.2s-9.4-4.2-9.4-10.2C14.6 18.6 17.8 12.8 24 7Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
         <path d="M19 25.5c3.1 1.1 6.9 1.1 10 0M24 19v22M17 41h14" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
       </svg>
@@ -14,7 +14,7 @@ function PrincipleIcon({ name }: { name: PrincipleIconName }) {
 
   if (name === "driver") {
     return (
-      <svg aria-hidden="true" className="h-8 w-8" fill="none" viewBox="0 0 48 48">
+      <svg aria-hidden="true" className="h-8 w-8 lg:h-10 lg:w-10" fill="none" viewBox="0 0 48 48">
         <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="2.4" />
         <path d="m24 14-4.2 12.4L32 22l-12.2 4.4L24 14Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
         <path d="M24 5v4M24 39v4M5 24h4M39 24h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2.4" />
@@ -23,7 +23,7 @@ function PrincipleIcon({ name }: { name: PrincipleIconName }) {
   }
 
   return (
-    <svg aria-hidden="true" className="h-8 w-8" fill="none" viewBox="0 0 48 48">
+    <svg aria-hidden="true" className="h-8 w-8 lg:h-10 lg:w-10" fill="none" viewBox="0 0 48 48">
       <path d="M24 7v34M15 11c6.4 3.5 11.6 3.5 18 0M14 37c7-3.4 13-3.4 20 0" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
       <path d="M24 14.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM24 27a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM24 39.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="currentColor" />
     </svg>
@@ -69,28 +69,28 @@ export function JourneySection() {
           <BodyMachineDiagram />
         </div>
 
-        <div className="mt-20 grid gap-6 max-sm:mt-8 max-sm:gap-3 md:grid-cols-3" aria-label="Ba yếu tố của cỗ máy cơ thể">
+        <div className="mt-20 grid gap-7 max-sm:mt-8 max-sm:gap-3 md:grid-cols-3 lg:gap-8" aria-label="Ba yếu tố của cỗ máy cơ thể">
           {bodyMachinePrinciples.map((item) => (
-            <article className="rounded-xl border border-[rgba(193,201,191,0.45)] bg-white/35 p-8 transition hover:bg-white/60 max-sm:grid max-sm:grid-cols-[42px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:p-4" key={item.title}>
-              <div className="mb-7 text-[#E8C266] max-sm:mb-0 max-sm:[&_svg]:h-7 max-sm:[&_svg]:w-7">
+            <article className="rounded-xl border border-[rgba(193,201,191,0.62)] bg-white/70 p-8 shadow-[0_22px_60px_rgba(40,90,56,0.06)] transition hover:-translate-y-1 hover:bg-white md:min-h-[280px] lg:p-11 max-sm:grid max-sm:min-h-0 max-sm:grid-cols-[42px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:p-4 max-sm:shadow-none" key={item.title}>
+              <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-full bg-[#F6F1DF] text-[#c09418] ring-1 ring-[#E8C266]/35 lg:mb-8 lg:h-16 lg:w-16 max-sm:mb-0 max-sm:h-auto max-sm:w-auto max-sm:bg-transparent max-sm:ring-0 max-sm:[&_svg]:h-7 max-sm:[&_svg]:w-7">
                 <PrincipleIcon name={item.icon} />
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-[#285A38] max-sm:text-xl">{item.title}</h3>
-              <p className="mt-4 text-base leading-[1.7] text-[#414941] max-sm:col-start-2 max-sm:mt-1 max-sm:text-[13px] max-sm:leading-6">{item.body}</p>
+              <h3 className="font-serif text-2xl font-semibold leading-tight text-[#285A38] lg:text-[2rem] max-sm:text-xl">{item.title}</h3>
+              <p className="mt-4 text-base leading-[1.75] text-[#343d35] lg:mt-5 lg:text-[1.0625rem] lg:leading-[1.8] max-sm:col-start-2 max-sm:mt-1 max-sm:text-[13px] max-sm:leading-6">{item.body}</p>
             </article>
           ))}
         </div>
 
-        <div className="relative mx-auto mt-24 max-w-5xl max-sm:mt-8">
-          <div className="absolute left-16 right-16 top-6 hidden h-px bg-[rgba(193,201,191,0.75)] md:block" aria-hidden="true" />
-          <div className="grid gap-8 max-sm:gap-4 md:grid-cols-4" aria-label="Hành trình chuyển hóa 4 bước">
+        <div className="relative mx-auto mt-20 max-w-[1180px] max-sm:mt-8 lg:mt-24">
+          <div className="absolute left-[8%] right-[8%] top-8 hidden h-px bg-[rgba(193,201,191,0.75)] lg:block" aria-hidden="true" />
+          <div className="grid gap-5 max-sm:gap-4 md:grid-cols-2 lg:grid-cols-4" aria-label="Hành trình chuyển hóa 4 bước">
             {journeySteps.map((item) => (
-              <article className="relative z-10 text-left max-sm:grid max-sm:grid-cols-[44px_minmax(0,1fr)] max-sm:gap-x-3 md:text-center" key={item.number}>
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E8C266] bg-[#F6F5EF] text-xs font-extrabold text-[#b08a1c] shadow-[0_0_0_8px_#F6F5EF] max-sm:h-10 max-sm:w-10 md:mx-auto">
+              <article className="relative z-10 rounded-xl border border-[rgba(193,201,191,0.56)] bg-[#FDFCF8] p-6 text-left shadow-[0_18px_50px_rgba(40,90,56,0.05)] max-sm:grid max-sm:grid-cols-[44px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:border-0 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none md:min-h-[250px] lg:min-h-[280px]" key={item.number}>
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#E8C266] bg-[#F6F5EF] text-sm font-extrabold text-[#9d7610] shadow-[0_0_0_8px_#F6F5EF] max-sm:h-10 max-sm:w-10 max-sm:text-xs md:mb-8">
                   {item.number}
                 </div>
-                <h3 className="mt-5 font-serif text-xl font-semibold leading-snug text-[#285A38] max-sm:mt-0 max-sm:text-lg">{item.title}</h3>
-                <p className="mt-3 text-sm leading-[1.7] text-[#414941] max-sm:col-start-2 max-sm:mt-1 max-sm:text-[13px] max-sm:leading-6">{item.body}</p>
+                <h3 className="font-serif text-[1.55rem] font-semibold leading-[1.18] text-[#285A38] max-sm:mt-0 max-sm:text-lg">{item.title}</h3>
+                <p className="mt-4 text-base leading-[1.75] text-[#343d35] max-sm:col-start-2 max-sm:mt-1 max-sm:text-[13px] max-sm:leading-6">{item.body}</p>
               </article>
             ))}
           </div>
