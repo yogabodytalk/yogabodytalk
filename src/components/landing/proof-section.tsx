@@ -6,7 +6,7 @@ export function ProofSection() {
   return (
     <section className={`${section} bg-surface`} id="students" aria-labelledby="students-title">
       <div className={shell}>
-        <div className="max-w-4xl max-sm:text-left">
+        <div className="max-w-4xl max-sm:text-left" data-motion="rise">
           <p className={eyebrow}>Bằng chứng học tập</p>
           <h2 id="students-title" className={heading}>
             Tài liệu, lớp học và tiến trình được hệ thống rõ ràng.
@@ -16,10 +16,10 @@ export function ProofSection() {
           </p>
         </div>
         <div className="mt-10 grid gap-4 max-sm:mt-6 max-sm:flex max-sm:snap-x max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-3 max-sm:[scrollbar-width:none] max-sm:[&::-webkit-scrollbar]:hidden lg:grid-cols-3">
-          {proofItems.map((item) => (
-            <figure className="rounded-xl bg-white p-4 shadow-soft max-sm:w-[58vw] max-sm:shrink-0 max-sm:snap-center max-sm:p-3" key={item.src}>
+          {proofItems.map((item, index) => (
+            <figure className="rounded-xl bg-white p-4 shadow-soft max-sm:w-[58vw] max-sm:shrink-0 max-sm:snap-center max-sm:p-3" key={item.src} data-motion="rise" data-motion-delay={String(index * 90)}>
               <Image
-                className="h-[360px] w-full rounded-lg border border-[rgba(114,121,113,0.32)] bg-white p-2 object-contain max-sm:h-[180px]"
+                className="motion-image-soft h-[360px] w-full rounded-lg border border-[rgba(114,121,113,0.32)] bg-white p-2 object-contain max-sm:h-[180px]"
                 src={item.src}
                 alt={item.alt}
                 width={900}

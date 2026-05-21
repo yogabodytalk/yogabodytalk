@@ -46,7 +46,7 @@ export function CoursesSection() {
   return (
     <section className="bg-[#F6F5EF] pt-20 pb-10 max-sm:pt-12 max-sm:pb-8 md:pt-20 md:pb-12 lg:pt-[120px]" id="courses" aria-labelledby="courses-title">
       <div className="mx-auto w-[min(1200px,calc(100%_-_40px))]">
-        <header className="mx-auto max-w-3xl text-center max-sm:text-left">
+        <header className="mx-auto max-w-3xl text-center max-sm:text-left" data-motion="rise">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b08a1c]">
             Lộ trình Body Talk
           </p>
@@ -73,10 +73,12 @@ export function CoursesSection() {
               <article
                 className={`relative flex h-full flex-col rounded-xl bg-[#faf9f9] p-6 text-[#1a1c1c] transition-all duration-300 max-sm:w-[82vw] max-sm:shrink-0 max-sm:snap-center max-sm:p-5 md:min-h-[540px] md:p-4 lg:min-h-[615px] lg:p-8 ${
                   isFeatured
-                    ? "border border-[#e8c266] shadow-[0_24px_64px_rgba(119,90,1,0.08)] lg:-translate-y-2"
+                    ? "featured-course border border-[#e8c266] shadow-[0_24px_64px_rgba(119,90,1,0.08)] lg:-translate-y-2"
                     : "border border-[rgba(193,201,191,0.42)] hover:shadow-[0_24px_54px_rgba(40,90,56,0.07)]"
                 }`}
                 key={course.title}
+                data-motion="rise"
+                data-motion-delay={String(index * 90)}
               >
                 {isFeatured ? (
                   <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#e8c266] px-3 py-1 text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-[#251a00]">
@@ -132,7 +134,7 @@ export function CoursesSection() {
 
                 <div className="mt-auto pt-6 max-sm:pt-5 lg:pt-8">
                   <a
-                    className={`inline-flex min-h-12 w-full items-center justify-center rounded-xl px-5 text-center text-[13px] font-extrabold uppercase transition md:min-h-11 md:px-3 md:text-[11px] md:leading-4 lg:min-h-12 lg:px-5 lg:text-sm ${
+                    className={`motion-cta inline-flex min-h-12 w-full items-center justify-center rounded-xl px-5 text-center text-[13px] font-extrabold uppercase transition md:min-h-11 md:px-3 md:text-[11px] md:leading-4 lg:min-h-12 lg:px-5 lg:text-sm ${
                       isFeatured
                         ? "bg-[#e8c266] text-[#251a00] hover:bg-[#ffdf97]"
                         : "border border-[#285A38] text-[#285A38] hover:bg-[#285A38]/5"
@@ -147,7 +149,7 @@ export function CoursesSection() {
           })}
         </div>
 
-        <article className="relative mt-12 overflow-hidden rounded-xl bg-[#285A38] p-7 text-white max-sm:mt-7 max-sm:p-5 md:mt-14 md:p-10 lg:p-16">
+        <article className="relative mt-12 overflow-hidden rounded-xl bg-[#285A38] p-7 text-white max-sm:mt-7 max-sm:p-5 md:mt-14 md:p-10 lg:p-16" data-motion="scale">
           <div className="absolute inset-0 bg-[#285A38]" aria-hidden="true" />
           <div className="relative z-10 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center lg:gap-10">
             <div className="max-w-[760px]">
@@ -177,7 +179,7 @@ export function CoursesSection() {
                 </ul>
               </div>
             </div>
-            <a className="inline-flex min-h-12 w-full shrink-0 items-center justify-center rounded-xl bg-[#e8c266] px-8 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-[#251a00] transition hover:bg-[#ffdf97] lg:w-auto" href="#contact">
+            <a className="motion-cta inline-flex min-h-12 w-full shrink-0 items-center justify-center rounded-xl bg-[#e8c266] px-8 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-[#251a00] transition hover:bg-[#ffdf97] lg:w-auto" href="#contact">
               {mentorCourse.cta}
             </a>
           </div>

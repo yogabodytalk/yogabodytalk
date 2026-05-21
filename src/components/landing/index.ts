@@ -11,5 +11,6 @@ export { JourneySection } from "./journey-section";
 export { LearningSection } from "./learning-section";
 export { MasterSection } from "./master-section";
 export { MethodSection } from "./method-section";
+export { MotionEffects } from "./motion-effects";
 export { PainSection } from "./pain-section";
 export { ProofSection } from "./proof-section";

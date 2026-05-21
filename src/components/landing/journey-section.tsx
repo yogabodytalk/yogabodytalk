@@ -32,7 +32,7 @@ function PrincipleIcon({ name }: { name: PrincipleIconName }) {
 
 function BodyMachineDiagram() {
   return (
-    <div className="relative overflow-hidden rounded-xl border border-[rgba(193,201,191,0.45)] bg-white/55 p-6 shadow-[0_24px_70px_rgba(40,90,56,0.06)] max-sm:hidden">
+    <div className="relative overflow-hidden rounded-xl border border-[rgba(193,201,191,0.45)] bg-white/55 p-6 shadow-[0_24px_70px_rgba(40,90,56,0.06)] max-sm:hidden" data-motion="scale" data-motion-delay="140">
       <svg className="h-auto w-full" fill="none" viewBox="0 0 560 312" aria-label="Sơ đồ cỗ máy cơ thể">
         <path d="M40 54c92-62 191-52 296 30 69 54 128 54 184 0" stroke="#285A38" strokeOpacity="0.42" strokeWidth="2" />
         <path d="M520 226c-92 62-191 52-296-30-69-54-128-54-184 0" stroke="#E8C266" strokeOpacity="0.82" strokeWidth="2" />
@@ -55,7 +55,7 @@ export function JourneySection() {
     <section className="bg-[#F6F5EF] pt-10 pb-20 max-sm:py-8 md:pt-12 md:pb-[120px]" id="journey" aria-labelledby="journey-title">
       <div className="mx-auto w-[min(1200px,calc(100%_-_40px))]">
         <div className="grid items-center gap-12 max-sm:gap-6 md:grid-cols-2 lg:gap-16">
-          <div>
+          <div data-motion="rise">
             <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-[#b08a1c]">
               Triết lý BODY TALK
             </p>
@@ -70,8 +70,8 @@ export function JourneySection() {
         </div>
 
         <div className="mt-20 grid gap-7 max-sm:mt-8 max-sm:gap-3 md:grid-cols-3 lg:gap-8" aria-label="Ba yếu tố của cỗ máy cơ thể">
-          {bodyMachinePrinciples.map((item) => (
-            <article className="rounded-xl border border-[rgba(193,201,191,0.62)] bg-white/70 p-8 shadow-[0_22px_60px_rgba(40,90,56,0.06)] transition hover:-translate-y-1 hover:bg-white md:min-h-[280px] lg:p-11 max-sm:grid max-sm:min-h-0 max-sm:grid-cols-[42px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:p-4 max-sm:shadow-none" key={item.title}>
+          {bodyMachinePrinciples.map((item, index) => (
+            <article className="rounded-xl border border-[rgba(193,201,191,0.62)] bg-white/70 p-8 shadow-[0_22px_60px_rgba(40,90,56,0.06)] transition hover:-translate-y-1 hover:bg-white md:min-h-[280px] lg:p-11 max-sm:grid max-sm:min-h-0 max-sm:grid-cols-[42px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:p-4 max-sm:shadow-none" key={item.title} data-motion="rise" data-motion-delay={String(index * 90)}>
               <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-full bg-[#F6F1DF] text-[#c09418] ring-1 ring-[#E8C266]/35 lg:mb-8 lg:h-16 lg:w-16 max-sm:mb-0 max-sm:h-auto max-sm:w-auto max-sm:bg-transparent max-sm:ring-0 max-sm:[&_svg]:h-7 max-sm:[&_svg]:w-7">
                 <PrincipleIcon name={item.icon} />
               </div>
@@ -82,10 +82,10 @@ export function JourneySection() {
         </div>
 
         <div className="relative mx-auto mt-20 max-w-[1180px] max-sm:mt-8 lg:mt-24">
-          <div className="absolute left-[8%] right-[8%] top-8 hidden h-px bg-[rgba(193,201,191,0.75)] lg:block" aria-hidden="true" />
+          <div className="absolute left-[8%] right-[8%] top-8 hidden h-px bg-[rgba(193,201,191,0.75)] lg:block" aria-hidden="true" data-motion="line" />
           <div className="grid gap-5 max-sm:gap-4 md:grid-cols-2 lg:grid-cols-4" aria-label="Hành trình chuyển hóa 4 bước">
-            {journeySteps.map((item) => (
-              <article className="relative z-10 rounded-xl border border-[rgba(193,201,191,0.56)] bg-[#FDFCF8] p-6 text-left shadow-[0_18px_50px_rgba(40,90,56,0.05)] max-sm:grid max-sm:grid-cols-[44px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:border-0 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none md:min-h-[250px] lg:min-h-[280px]" key={item.number}>
+            {journeySteps.map((item, index) => (
+              <article className="relative z-10 rounded-xl border border-[rgba(193,201,191,0.56)] bg-[#FDFCF8] p-6 text-left shadow-[0_18px_50px_rgba(40,90,56,0.05)] max-sm:grid max-sm:grid-cols-[44px_minmax(0,1fr)] max-sm:gap-x-3 max-sm:border-0 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none md:min-h-[250px] lg:min-h-[280px]" key={item.number} data-motion="rise" data-motion-delay={String(120 + index * 90)}>
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#E8C266] bg-[#F6F5EF] text-sm font-extrabold text-[#9d7610] shadow-[0_0_0_8px_#F6F5EF] max-sm:h-10 max-sm:w-10 max-sm:text-xs md:mb-8">
                   {item.number}
                 </div>
@@ -96,7 +96,7 @@ export function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center max-sm:mt-8 max-sm:justify-start">
+        <div className="mt-16 flex justify-center max-sm:mt-8 max-sm:justify-start" data-motion="rise">
           <a className="inline-flex items-center gap-2 border-b border-[#E8C266] pb-1 text-sm font-extrabold uppercase tracking-[0.08em] text-[#285A38] transition hover:text-[#b08a1c] max-sm:min-h-11" href="#contact">
             Nhận gợi ý lộ trình theo cơ thể
             <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24">

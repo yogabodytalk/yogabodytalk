@@ -6,7 +6,7 @@ export function MethodSection() {
   return (
     <section className={`${section}`} id="method" aria-labelledby="method-title">
       <div className={`${shell} grid items-start gap-10 max-sm:gap-7 lg:grid-cols-[0.78fr_1.18fr_0.94fr] lg:gap-10`}>
-        <div className="flex flex-col gap-6 max-sm:gap-4">
+        <div className="flex flex-col gap-6 max-sm:gap-4" data-motion="rise">
           <div className="flex items-center gap-4">
             <span className="h-px w-8 bg-gold/55" aria-hidden="true" />
             <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gold-deep">Phương pháp BODY TALK</p>
@@ -19,16 +19,16 @@ export function MethodSection() {
           </p>
         </div>
 
-        <div className="relative flex justify-center lg:order-3 lg:justify-end">
-          <figure className="relative w-full max-w-[360px] border border-gold/25 bg-cream p-2.5 shadow-[0_22px_56px_rgba(32,52,35,0.08)] max-sm:max-w-none max-sm:p-2">
-            <span className="absolute -right-3 -top-3 h-full w-full border border-[rgba(122,94,6,0.12)]" aria-hidden="true" />
+        <div className="relative flex justify-center lg:order-3 lg:justify-end" data-motion="scale" data-motion-delay="120">
+          <figure className="relative w-full max-w-[360px] border border-gold/25 bg-cream p-2.5 shadow-[0_22px_56px_rgba(32,52,35,0.08)] max-sm:mx-auto max-sm:max-w-[300px] max-sm:rounded-[14px] max-sm:border-gold/30 max-sm:bg-[#f8f3e8] max-sm:p-2.5 max-sm:shadow-[0_18px_42px_rgba(32,52,35,0.1)]">
+            <span className="absolute -right-3 -top-3 h-full w-full border border-[rgba(122,94,6,0.12)] max-sm:hidden" aria-hidden="true" />
             <Image
-              className="relative z-10 h-auto w-full max-sm:h-[220px] max-sm:object-cover max-sm:object-[50%_22%]"
+              className="motion-image-soft relative z-10 h-auto w-full max-sm:rounded-[10px] max-sm:object-contain"
               src="/anh-ghep/yoga-f3.jpg"
               alt="Yoga Phong Thái - vẻ đẹp của nội lực thanh tao"
               width={941}
               height={1672}
-              sizes="(min-width: 1024px) 360px, 300px"
+              sizes="(min-width: 1024px) 360px, (max-width: 640px) 300px, 320px"
               loading="eager"
               unoptimized
             />
@@ -41,6 +41,8 @@ export function MethodSection() {
             <article
               className="relative mb-10 border-b border-[rgba(114,121,113,0.24)] pb-10 max-sm:mb-0 max-sm:rounded-lg max-sm:border max-sm:bg-surface/70 max-sm:p-4 max-sm:pb-4 last:mb-0 last:border-b-0 last:pb-1 max-sm:last:border lg:mb-12 lg:pb-12"
               key={item.label}
+              data-motion="rise"
+              data-motion-delay={String(index * 90)}
             >
               <span className="absolute -left-[37px] top-1 h-2.5 w-2.5 rounded-full border-2 border-cream bg-gold max-sm:hidden" aria-hidden="true" />
               <span className="mb-3 block text-xs font-extrabold uppercase tracking-[0.14em] text-gold-deep">

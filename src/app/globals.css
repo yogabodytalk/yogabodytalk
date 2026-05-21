@@ -42,3 +42,228 @@ input,
 select {
   font: inherit;
 }
+
+.motion-ready [data-motion] {
+  --motion-delay: 0ms;
+  --motion-x: 0px;
+  --motion-y: 18px;
+  --motion-scale: 1;
+  opacity: 0;
+  transform: translate3d(var(--motion-x), var(--motion-y), 0) scale(var(--motion-scale));
+  transition:
+    opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 780ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--motion-delay);
+  will-change: opacity, transform;
+}
+
+.motion-ready [data-motion="fade"] {
+  --motion-y: 0px;
+}
+
+.motion-ready [data-motion="scale"] {
+  --motion-y: 10px;
+  --motion-scale: 0.965;
+  filter: saturate(0.92);
+}
+
+.motion-ready [data-motion="slide-left"] {
+  --motion-x: 24px;
+  --motion-y: 0px;
+}
+
+.motion-ready [data-motion="slide-right"] {
+  --motion-x: -24px;
+  --motion-y: 0px;
+}
+
+.motion-ready [data-motion="line"] {
+  --motion-y: 0px;
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.motion-ready [data-motion].motion-in {
+  opacity: 1;
+  filter: none;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.motion-ready [data-motion].motion-in:is(article, figure):hover {
+  transform: translate3d(0, -4px, 0) scale(1);
+}
+
+@media (min-width: 1024px) {
+  .motion-ready [data-motion].motion-in.featured-course {
+    transform: translate3d(0, -8px, 0) scale(1);
+  }
+
+  .motion-ready [data-motion].motion-in.featured-course:hover {
+    transform: translate3d(0, -12px, 0) scale(1);
+  }
+}
+
+.motion-breath {
+  animation: bodytalk-breath 7.5s ease-in-out infinite;
+  transform-origin: center top;
+}
+
+.motion-cta {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.motion-cta::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+  content: "";
+  height: 120%;
+  left: -80%;
+  position: absolute;
+  top: -10%;
+  transform: skewX(-18deg);
+  transition: left 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: 48%;
+}
+
+.motion-cta:hover::after {
+  left: 132%;
+}
+
+.motion-image-soft {
+  transition:
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-image-soft:hover {
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.025);
+}
+
+.motion-zalo-pulse {
+  animation: zalo-soft-pulse 4.8s ease-in-out infinite;
+}
+
+.floating-zalo-action {
+  isolation: isolate;
+  position: relative;
+}
+
+.floating-zalo-action::before,
+.floating-zalo-action::after {
+  border: 1px solid rgba(0, 104, 255, 0.26);
+  border-radius: 9999px;
+  content: "";
+  inset: -7px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(0.78);
+  z-index: -1;
+}
+
+.floating-zalo-action::before {
+  animation: zalo-attention-ring 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.floating-zalo-action::after {
+  animation: zalo-attention-ring 2.8s 1.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  inset: -13px;
+}
+
+.floating-zalo-action svg {
+  animation: zalo-icon-nudge 3.8s ease-in-out infinite;
+}
+
+.floating-scroll-top {
+  will-change: opacity, transform;
+}
+
+@keyframes bodytalk-breath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.018);
+  }
+}
+
+@keyframes zalo-soft-pulse {
+  0%,
+  68%,
+  100% {
+    box-shadow: 0 18px 48px rgba(32, 52, 35, 0.1), 0 0 0 0 rgba(0, 104, 255, 0);
+  }
+  80% {
+    box-shadow: 0 18px 48px rgba(32, 52, 35, 0.1), 0 0 0 12px rgba(0, 104, 255, 0.2);
+  }
+}
+
+@keyframes zalo-attention-ring {
+  0% {
+    opacity: 0;
+    transform: scale(0.78);
+  }
+  18% {
+    opacity: 0.58;
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: scale(1.26);
+  }
+}
+
+@keyframes zalo-icon-nudge {
+  0%,
+  76%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  82% {
+    transform: translateY(-1px) rotate(-3deg);
+  }
+  88% {
+    transform: translateY(1px) rotate(3deg);
+  }
+  94% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .motion-ready [data-motion] {
+    --motion-y: 12px;
+    transition-duration: 520ms;
+  }
+
+  .motion-breath,
+  .motion-zalo-pulse {
+    animation-duration: 9s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .motion-ready [data-motion] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .floating-zalo-action::before,
+  .floating-zalo-action::after {
+    display: none;
+  }
+}

@@ -21,7 +21,7 @@ export function PainSection() {
       </div>
 
       <div className={shell}>
-        <div className="mx-auto max-w-3xl text-center max-sm:text-left">
+        <div className="mx-auto max-w-3xl text-center max-sm:text-left" data-motion="rise">
           <p className={eyebrow}>Nhận diện vấn đề</p>
           <h2 id="pain-title" className={heading}>
             Dấu hiệu cơ thể đang lên tiếng.
@@ -31,7 +31,7 @@ export function PainSection() {
           </p>
         </div>
 
-        <div className="relative mt-12 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-surface-low/80 shadow-[0_24px_70px_rgba(32,52,35,0.06)] max-sm:mt-7">
+        <div className="relative mt-12 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-surface-low/80 shadow-[0_24px_70px_rgba(32,52,35,0.06)] max-sm:mt-7" data-motion="scale">
           <div className="absolute inset-x-8 top-0 h-px bg-gold/70" aria-hidden="true" />
           <div className="grid grid-cols-2 md:grid-cols-2">
             {painPoints.map((item, index) => (

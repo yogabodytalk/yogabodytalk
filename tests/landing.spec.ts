@@ -70,6 +70,25 @@ test.describe("Yoga Phong Thai landing page", () => {
     await expect(menuButton).toHaveAttribute("aria-expanded", "false");
   });
 
+  test("shows floating quick actions and scrolls back to top", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto("/");
+
+    const zaloButton = page.getByRole("link", { name: "Liên hệ Zalo" });
+    await expect(zaloButton).toBeVisible();
+    await expect(zaloButton).toHaveAttribute("href", /zalo\.me\/0962895314/);
+    await expect(zaloButton.locator("svg")).toBeVisible();
+
+    const scrollTopButton = page.getByRole("button", { name: "Lên đầu trang" });
+    await expect(scrollTopButton).toHaveCSS("opacity", "0");
+
+    await page.evaluate(() => window.scrollTo(0, 1400));
+    await expect.poll(async () => scrollTopButton.evaluate((element) => getComputedStyle(element).opacity)).toBe("1");
+
+    await scrollTopButton.click();
+    await expect.poll(async () => page.evaluate(() => window.scrollY)).toBeLessThan(30);
+  });
+
   test("validates lead form and builds the Zalo message", async ({ page, context }) => {
     await page.goto("/");
 

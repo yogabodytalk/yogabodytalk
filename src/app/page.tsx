@@ -11,6 +11,7 @@ import {
   JourneySection,
   MasterSection,
   MethodSection,
+  MotionEffects,
   PainSection,
   ProofSection,
 } from "@/components/landing";
@@ -34,6 +35,7 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingZaloLink />
+      <MotionEffects />
     </>
   );
 }

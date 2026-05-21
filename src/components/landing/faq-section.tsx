@@ -5,7 +5,7 @@ export function FaqSection() {
   return (
     <section className={`${shell} py-20 max-sm:py-8 md:py-[120px]`} id="faq" aria-labelledby="faq-title">
       <div className="grid items-start gap-12 max-sm:gap-8 md:grid-cols-12 md:gap-6">
-        <div className="md:col-span-5 md:pr-10">
+        <div className="md:col-span-5 md:pr-10" data-motion="rise">
           <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-gold-deep">
             Hỏi đáp trước khi chọn lộ trình
           </p>
@@ -27,7 +27,7 @@ export function FaqSection() {
           </div>
         </div>
 
-        <div className="md:col-span-7">
+        <div className="md:col-span-7" data-motion="rise" data-motion-delay="120">
           <FaqList />
         </div>
       </div>

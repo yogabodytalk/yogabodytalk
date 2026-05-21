@@ -4,9 +4,9 @@ import { eyebrow, section, shell } from "./shared";
 export function MasterSection() {
   return (
     <section className={`${section} ${shell} grid items-center gap-8 md:grid-cols-[0.72fr_1fr] lg:grid-cols-[0.75fr_1fr] lg:gap-14`} id="master" aria-labelledby="master-title">
-      <div className="mx-auto w-full max-w-[460px] overflow-hidden rounded-xl bg-surface md:max-w-none">
+      <div className="mx-auto w-full max-w-[460px] overflow-hidden rounded-xl bg-surface md:max-w-none" data-motion="scale">
         <Image
-          className="h-[min(72vw,320px)] w-full object-cover object-top shadow-soft md:h-[380px] lg:h-[520px]"
+          className="motion-image-soft h-[min(72vw,320px)] w-full object-cover object-top shadow-soft md:h-[380px] lg:h-[520px]"
           src="/anh-ghep/yoga-phong-thai-02.png"
           alt="Master Thu Nhanh BODY TALK"
           width={900}
@@ -14,7 +14,7 @@ export function MasterSection() {
           loading="eager"
         />
       </div>
-      <div>
+      <div data-motion="rise" data-motion-delay="120">
         <p className={eyebrow}>Người đồng hành</p>
         <p className="mb-3 font-sans text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.13em] text-gold-deep md:text-base lg:text-[1.125rem]">
           Master Yoga
@@ -25,7 +25,7 @@ export function MasterSection() {
         <p className="mt-5 max-w-[620px] text-[15px] leading-7 text-muted md:text-base lg:mt-6 lg:text-lg">
           Đồng hành cùng học viên bằng tinh thần kỷ luật để tái sinh: chỉnh sửa cơ thể bằng sự hiểu biết, hơi thở và thói quen sống mới thay vì ép dáng trong thời gian ngắn.
         </p>
-        <dl className="mt-7 grid grid-cols-3 gap-2 sm:gap-3 lg:mt-8">
+        <dl className="mt-7 grid grid-cols-3 gap-2 sm:gap-3 lg:mt-8" data-motion="rise" data-motion-delay="220">
           <div className="border-t-[3px] border-gold bg-surface p-4 max-sm:p-3 md:p-3 lg:p-4">
             <dt className="font-serif text-2xl text-sage max-sm:text-xl lg:text-3xl">5</dt>
             <dd className="mt-1 text-xs font-bold leading-snug text-muted">học viên tối đa trong lớp offline</dd>

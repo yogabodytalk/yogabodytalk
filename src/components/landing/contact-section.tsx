@@ -5,7 +5,7 @@ import { eyebrow, heading, section, shell } from "./shared";
 export function ContactSection() {
   return (
     <section className={`${section} ${shell} grid items-center gap-10 rounded-xl bg-surface p-5 text-ink max-sm:gap-6 max-sm:p-4 sm:p-8 lg:grid-cols-[1fr_minmax(320px,430px)]`} id="contact" aria-labelledby="contact-title">
-      <div>
+      <div data-motion="rise">
         <p className={eyebrow}>Tư vấn lộ trình</p>
         <h2 id="contact-title" className={heading}>
           Bắt đầu bằng việc hiểu đúng cơ thể của bạn.
@@ -17,9 +17,9 @@ export function ContactSection() {
           <LeadForm />
         </div>
       </div>
-      <div className="mx-auto w-full max-w-[430px] rounded-xl bg-cream/70 p-4 pb-7 shadow-soft max-sm:hidden">
+      <div className="mx-auto w-full max-w-[430px] rounded-xl bg-cream/70 p-4 pb-7 shadow-soft max-sm:hidden" data-motion="scale" data-motion-delay="120">
         <Image
-          className="h-auto w-full rounded-lg object-contain"
+          className="motion-image-soft h-auto w-full rounded-lg object-contain"
           src="/landing-assets/yoga-phong-thai-landing-03-cta.webp"
           alt="Tư vấn Yoga Phong Thái cùng Master Thu Nhanh"
           width={1080}
