@@ -2,6 +2,7 @@ export { ContactSection } from "./contact-section";
 export { CourseIntroSection } from "./course-intro-section";
 export { CoursesSection } from "./courses-section";
 export { FaqSection } from "./faq-section";
+export { FeedbackSection } from "./feedback-section";
 export { FloatingZaloLink } from "./floating-zalo-link";
 export { Footer } from "./footer";
 export { Header } from "./header";

@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "ag-kit": "ag-kit",
+    "ag-kit:status": "ag-kit status"
   },
   "dependencies": {
     "@tailwindcss/postcss": "latest",
@@ -19,6 +21,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@vudovn/ag-kit": "^2.0.2",
     "typescript": "latest"
   }
 }

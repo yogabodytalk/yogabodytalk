@@ -21,7 +21,7 @@ export function PainSection() {
       </div>
 
       <div className={shell}>
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center max-sm:text-left">
           <p className={eyebrow}>Nhận diện vấn đề</p>
           <h2 id="pain-title" className={heading}>
             Dấu hiệu cơ thể đang lên tiếng.
@@ -31,16 +31,16 @@ export function PainSection() {
           </p>
         </div>
 
-        <div className="relative mt-12 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-surface-low/80 shadow-[0_24px_70px_rgba(32,52,35,0.06)]">
+        <div className="relative mt-12 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-surface-low/80 shadow-[0_24px_70px_rgba(32,52,35,0.06)] max-sm:mt-7">
           <div className="absolute inset-x-8 top-0 h-px bg-gold/70" aria-hidden="true" />
-          <div className="grid md:grid-cols-2">
+          <div className="grid grid-cols-2 md:grid-cols-2">
             {painPoints.map((item, index) => (
-              <article className={`border-[rgba(122,94,6,0.22)] p-6 sm:p-8 md:min-h-56 ${cellBorders[index]}`} key={item.number}>
-                <div className="flex items-start gap-5">
-                  <span className="font-serif text-[2.75rem] leading-none text-gold-deep/35 md:text-6xl">{item.number}</span>
+              <article className={`border-[rgba(122,94,6,0.22)] p-6 max-sm:p-4 sm:p-8 md:min-h-56 ${cellBorders[index]}`} key={item.number}>
+                <div className="flex items-start gap-5 max-sm:flex-col max-sm:gap-2">
+                  <span className="font-serif text-[2.75rem] leading-none text-gold-deep/35 max-sm:text-3xl md:text-6xl">{item.number}</span>
                   <div className="pt-1">
-                    <h3 className="font-serif text-2xl leading-tight text-sage md:text-[1.7rem]">{item.title}</h3>
-                    <p className="mt-4 max-w-md text-sm leading-7 text-muted md:text-[15px]">{item.body}</p>
+                    <h3 className="font-serif text-2xl leading-tight text-sage max-sm:text-[1.08rem] md:text-[1.7rem]">{item.title}</h3>
+                    <p className="mt-4 max-w-md text-sm leading-7 text-muted max-sm:mt-2 max-sm:text-[12.5px] max-sm:leading-5 md:text-[15px]">{item.body}</p>
                   </div>
                 </div>
               </article>

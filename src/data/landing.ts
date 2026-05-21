@@ -29,40 +29,94 @@ export const courses = [
   {
     meta: "Nền tảng",
     title: "12 Ngày Nền Tảng",
+    icon: "breath",
     time: "Cho người mới bắt đầu",
+    badge: "",
+    price: "968.000 VNĐ",
+    priceNote: "Học nền tảng hơi thở và trục dáng",
     body: "Học cách thở chuẩn, làm mềm cơ thể và đặt lại nền tảng dáng đứng.",
     items: ["Hơi thở và mở ngực", "Linh hoạt vai, cổ, hông", "Dáng đứng và dáng ngồi"],
+    highlight: "Phù hợp để bắt đầu nhẹ nhàng, hiểu cơ thể và sửa những thói quen cơ bản.",
+    offer: "",
+    cta: "Bắt đầu 12 ngày với 968K",
     featured: false,
   },
   {
     meta: "Chuyên sâu",
     title: "30 Ngày Chỉnh Dáng",
+    icon: "alignment",
     time: "Lớp nhỏ hoặc cá nhân",
+    badge: "",
+    price: "9.968.000 VNĐ",
+    priceNote: "Tối đa 5 học viên",
     body: "Mentor chỉnh từng điểm sai lệch để cải thiện vai, cổ, lưng và trục cơ thể.",
     items: ["Tối đa 5 học viên offline", "20 buổi chỉnh sửa chuyên sâu", "Theo dõi tiến trình từng tuần"],
-    featured: true,
+    highlight: "Tặng 02 buổi xả cơ, giãn cơ, đả thông kinh lạc trị giá 1.000.000 VNĐ.",
+    offer: "Tặng 02 buổi xả cơ, giãn cơ, đả thông kinh lạc trị giá 1.000.000 VNĐ.",
+    cta: "Giữ 1 suất chỉnh dáng 30 ngày",
+    featured: false,
   },
   {
     meta: "Chuyển hóa",
     title: "90 Ngày Thân Tâm Trí",
+    icon: "balance",
     time: "12 tuần hybrid",
+    badge: "Lựa chọn tối ưu",
+    price: "3.968.000 VNĐ",
+    priceNote: "Chuyển hóa thân - tâm - trí",
     body: "Kết hợp chỉnh dáng, nội lực, thói quen sống và tư duy chăm sóc cơ thể.",
     items: ["Định tuyến bộ khung", "Nhận thức nội tâm", "Lối sống và dinh dưỡng"],
+    highlight: "Lựa chọn cân bằng cho người muốn duy trì kết quả và xây thói quen dài hơn.",
+    offer: "",
+    cta: "Chọn lộ trình 90 ngày",
+    featured: false,
+  },
+  {
+    meta: "Truyền nhân",
+    title: "Đào Tạo HLV & Nhượng Quyền",
+    icon: "mentor",
+    time: "Đồng hành 1 năm",
+    badge: "",
+    price: "150.000.000 VNĐ",
+    priceNote: "Tối đa 3 người",
+    body: "Lộ trình dành cho học viên muốn trở thành người hướng dẫn và phát triển mô hình BODY TALK.",
+    items: ["Đào tạo chuyên môn", "Đồng hành vận hành", "Chuyển giao hệ thống"],
+    highlight: "Lộ trình riêng cho người muốn học sâu, được kèm sát và chuyển giao hệ thống.",
+    offer: "",
+    cta: "Đặt lịch trao đổi nhượng quyền",
     featured: false,
   },
 ] as const;
 
+export const bodyMachinePrinciples = [
+  {
+    icon: "frame",
+    title: "Bộ khung",
+    body: "Cổ, vai, cột sống và hông được nắn chỉnh để dáng đứng trở về trục tự nhiên.",
+  },
+  {
+    icon: "fuel",
+    title: "Nhiên liệu",
+    body: "Dinh dưỡng và thói quen được cá nhân hóa để cơ thể có đủ năng lượng phục hồi.",
+  },
+  {
+    icon: "driver",
+    title: "Người cầm lái",
+    body: "Tư duy tích cực, thiền định và hơi thở giúp bạn giữ hướng đi bình tĩnh, bền bỉ.",
+  },
+] as const;
+
 export const journeySteps = [
-  { number: "01", title: "Lắng nghe", body: "Đọc tín hiệu cơ thể, xác định vùng căng và mục tiêu thay đổi của từng học viên." },
-  { number: "02", title: "Nền tảng", body: "Xây lại hơi thở, sự linh hoạt và ý thức trục cơ thể trong từng chuyển động." },
-  { number: "03", title: "Chỉnh sửa", body: "Căn chỉnh vai, cổ, cột sống, hông và các thói quen làm sai lệch vóc dáng." },
-  { number: "04", title: "Chuyển hóa", body: "Biến kỹ thuật thành phong thái: đi, đứng, ngồi, thở và hiện diện tự tin hơn." },
+  { number: "01", title: "Lắng nghe tín hiệu cơ thể", body: "Đọc vùng căng, hơi thở và thói quen đang khiến cỗ máy cơ thể vận hành nặng nề." },
+  { number: "02", title: "Xây lại bộ khung và hơi thở", body: "Nắn chỉnh cổ, vai, cột sống, hông và đưa nhịp thở sâu trở lại làm nền." },
+  { number: "03", title: "Nạp đúng nhiên liệu sống", body: "Điều chỉnh dinh dưỡng, nhịp sinh hoạt và năng lượng phục hồi theo từng cơ địa." },
+  { number: "04", title: "Cầm lái phong thái mới", body: "Rèn tư duy, thiền định và hiện diện để thân - tâm - trí đi đúng hướng lâu dài." },
 ] as const;
 
 export const learningTracks = [
-  { count: "12 bài", title: "Nền tảng hơi thở", body: "Làm chủ nhịp thở, mở ngực và xây lại nhận thức cơ thể cho người mới.", status: "Thư viện học", muted: false },
-  { count: "20 buổi", title: "Chỉnh dáng 30 ngày", body: "Điều chỉnh vai, cổ, cột sống và các thói quen làm sai lệch vóc dáng.", status: "Thư viện học", muted: false },
-  { count: "12 tuần", title: "Thân - Tâm - Trí 90 ngày", body: "Hành trình chuyên sâu kết nối luyện tập, thói quen sống và nội lực.", status: "Sắp mở", muted: true },
+  { count: "968K", title: "Nền tảng hơi thở", body: "Làm chủ nhịp thở, mở ngực và xây lại nhận thức cơ thể cho người mới.", status: "12 bài học", cta: "Bắt đầu 12 ngày với 968K", muted: false },
+  { count: "9.968K", title: "Chỉnh dáng 30 ngày", body: "Điều chỉnh vai, cổ, cột sống và nhận ưu đãi 02 buổi xả cơ trị giá 1 triệu.", status: "Tối đa 5 học viên", cta: "Giữ 1 suất chỉnh dáng 30 ngày", muted: false },
+  { count: "3.968K", title: "Thân - Tâm - Trí 90 ngày", body: "Hành trình chuyên sâu kết nối luyện tập, thói quen sống và nội lực.", status: "Lựa chọn tối ưu", cta: "Chọn lộ trình 90 ngày", muted: false },
 ] as const;
 
 export const proofItems = [
@@ -83,11 +137,38 @@ export const proofItems = [
   },
 ] as const;
 
-export const faqs = [
-  { question: "Ai phù hợp với Yoga Phong Thái?", answer: "Phù hợp với phụ nữ muốn cải thiện dáng, vai cổ gáy, hơi thở, sự linh hoạt và phong thái khi xuất hiện." },
-  { question: "30 ngày khác gì 90 ngày?", answer: "30 ngày tập trung chỉnh dáng chuyên sâu. 90 ngày mở rộng sang thân - tâm - trí, thói quen sống và duy trì kết quả." },
-  { question: "Có cần nền tảng yoga trước không?", answer: "Không bắt buộc. Lớp cơ bản được thiết kế để học viên bắt đầu từ hơi thở, trục dáng và chuyển động an toàn." },
-  { question: "Học online hay offline?", answer: "Có thể tư vấn theo nhu cầu. Lớp offline phù hợp người cần chỉnh lỗi trực tiếp, còn online phù hợp duy trì luyện tập linh hoạt." },
+export const testimonials = [
+  {
+    name: "Doanh nhân Mai Son",
+    role: "Doanh nhân · Áp lực thương trường",
+    quote:
+      "Học được cách lắng nghe cơ thể và tìm thấy sự bình yên trong tâm hồn giữa muôn vàn áp lực thương trường.",
+    image: "/testimonials/mai-son.png",
+  },
+  {
+    name: "Katherine Trinh",
+    role: "60 tuổi · Mỹ · Học online qua Zoom",
+    quote: "Chuyển đổi vóc dáng và cải thiện sức khỏe đáng kể nhờ học online qua Zoom.",
+    image: "/testimonials/katherine-trinh.png",
+  },
 ] as const;
 
-export const programs = ["Yoga Phong Thái Cơ Bản", "30 Ngày Chỉnh Dáng", "90 Ngày Thân Tâm Trí"] as const;
+export const faqs = [
+  {
+    question: "Tôi nên bắt đầu từ lộ trình nào?",
+    answer:
+      "4 tuần dành cho nền tảng hơi thở và trục dáng. 30 ngày phù hợp khi cần chỉnh dáng sâu. 90 ngày dành cho hành trình Thân - Tâm - Trí bền hơn.",
+  },
+  {
+    question: "BODY TALK khác gì yoga thông thường?",
+    answer:
+      "BODY TALK bắt đầu từ lắng nghe cơ thể, hơi thở và trục dáng trước khi đi vào động tác. Mục tiêu không chỉ là tập được một tư thế, mà là hiểu cơ thể để chỉnh đúng và giữ phong thái tự nhiên hơn.",
+  },
+  {
+    question: "Master Thu Nhanh đồng hành ra sao?",
+    answer:
+      "Cô quan sát hơi thở, trục dáng, vai cổ gáy và nhịp sống hiện tại để gợi ý điểm bắt đầu phù hợp. Khi vào lộ trình, phần điều chỉnh sẽ đi theo tình trạng cơ thể thật của từng học viên.",
+  },
+] as const;
+
+export const programs = ["Yoga Phong Thái Cơ Bản", "30 Ngày Chỉnh Dáng", "90 Ngày Thân Tâm Trí", "Đào Tạo HLV & Nhượng Quyền"] as const;

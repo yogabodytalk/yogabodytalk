@@ -3,12 +3,12 @@ import {
   CourseIntroSection,
   CoursesSection,
   FaqSection,
+  FeedbackSection,
   FloatingZaloLink,
   Footer,
   Header,
   HeroSection,
   JourneySection,
-  LearningSection,
   MasterSection,
   MethodSection,
   PainSection,
@@ -26,9 +26,9 @@ export default function Home() {
         <MethodSection />
         <CoursesSection />
         <JourneySection />
-        <LearningSection />
         <ProofSection />
         <MasterSection />
+        <FeedbackSection />
         <FaqSection />
         <ContactSection />
       </main>

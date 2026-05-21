@@ -22,7 +22,7 @@ export function Header() {
           scrolled ? "shadow-[0_14px_34px_rgba(32,52,35,0.11)]" : ""
         }`}
       >
-        <a className="flex min-w-0 items-center gap-2.5" href="#top" aria-label="Yoga Phong Thái">
+        <a className="flex min-h-11 min-w-0 items-center gap-2.5" href="#top" aria-label="Yoga Phong Thái">
           <Image src="/brand-assets/body-talk-symbol-dark.svg" alt="" width={34} height={34} priority />
           <span>
             <strong className="block font-serif text-lg leading-none">Yoga Phong Thái</strong>

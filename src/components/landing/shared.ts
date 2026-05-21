@@ -1,6 +1,6 @@
 export const shell = "mx-auto w-[min(1200px,calc(100%_-_40px))]";
 
-export const section = "py-16 max-sm:py-11";
+export const section = "py-16 max-sm:py-8";
 
 export const eyebrow = "mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-gold-deep";
 

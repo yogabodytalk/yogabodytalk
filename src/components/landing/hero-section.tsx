@@ -5,37 +5,56 @@ import { eyebrow, primaryButton, secondaryButton, shell } from "./shared";
 export function HeroSection() {
   return (
     <section
-      className={`${shell} grid items-start gap-[clamp(28px,5vw,64px)] pt-[clamp(28px,4vw,48px)] pb-[34px] lg:grid-cols-[minmax(0,1fr)_minmax(320px,420px)]`}
+      className={`${shell} grid items-start gap-[clamp(28px,5vw,64px)] pt-[clamp(28px,4vw,48px)] pb-[clamp(52px,7vw,88px)] max-sm:gap-6 max-sm:pt-10 max-sm:pb-9 lg:grid-cols-[minmax(0,1.04fr)_minmax(320px,420px)]`}
       aria-labelledby="hero-title"
     >
-      <div className="pt-[clamp(18px,3.2vw,48px)] max-sm:pt-0">
-        <p className={eyebrow}>Personal transformation</p>
-        <h1 id="hero-title" className="max-w-[680px] font-serif text-[clamp(2.5rem,4vw,3.625rem)] font-normal leading-[1.1] text-sage max-sm:text-[clamp(2.125rem,10vw,2.75rem)]">
+      <div className="flex min-h-[680px] flex-col justify-center py-[clamp(12px,2.2vw,32px)] max-lg:min-h-0 max-lg:justify-start max-lg:py-0">
+        <p className={eyebrow}>Yoga Phong Thái · Body Talk</p>
+        <h1 id="hero-title" className="max-w-[680px] font-serif text-[clamp(2.45rem,4vw,3.625rem)] font-normal leading-[1.1] text-sage max-sm:text-[clamp(2.125rem,10vw,2.75rem)]">
           Đẹp từ trục cơ thể. Sang từ phong thái.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted">
-          Lộ trình Yoga Phong Thái cùng Master Thu Nhanh giúp phụ nữ mở hơi thở, chỉnh dáng và xây dựng khí chất thanh lịch từ bên trong.
+        <p className="mt-6 max-w-[680px] text-lg font-medium leading-relaxed text-ink/85 max-sm:mt-4 max-sm:text-[15px] max-sm:leading-7">
+          Lộ trình cùng Master Thu Nhanh giúp phụ nữ mở hơi thở, chỉnh lại trục dáng và đưa sự thanh lịch trở thành cảm giác tự nhiên trong từng cử chỉ.
         </p>
-        <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-wrap gap-3 max-sm:mt-5">
           <a className={primaryButton} href="#contact">
-            Đặt lịch tư vấn
+            Soi dáng miễn phí ngay
           </a>
           <a className={secondaryButton} href="#courses">
-            Xem lộ trình
+            Xem khóa phù hợp với tôi
           </a>
         </div>
-        <div className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Thông tin chương trình">
-          {heroStats.map((item) => (
-            <div className="rounded-xl border border-[rgba(114,121,113,0.32)] bg-white/55 p-4" key={item.value}>
-              <strong className="block font-serif text-2xl text-sage">{item.value}</strong>
-              <span className="text-sm font-semibold text-muted">{item.label}</span>
+        <div
+          className="mt-7 rounded-lg border border-l-[3px] border-[rgba(63,107,74,0.18)] border-l-gold bg-white/76 px-5 py-5 shadow-[0_18px_42px_rgba(32,52,35,0.08)] max-sm:mt-5 max-sm:px-4 max-sm:py-4 sm:grid sm:grid-cols-[124px_minmax(0,1fr)] sm:items-center sm:gap-6"
+          aria-labelledby="philosophy-title"
+        >
+          <div>
+            <p className="font-serif text-[clamp(1.9rem,3.4vw,2.65rem)] leading-none text-gold-deep max-sm:text-[1.75rem]">80/20</p>
+          </div>
+          <div className="mt-4 sm:mt-0">
+            <h2 id="philosophy-title" className="font-serif text-[1.35rem] font-normal leading-tight text-sage max-sm:text-[1.15rem] sm:text-[1.7rem]">
+              Không chỉ là tập luyện hình thể.
+            </h2>
+            <p className="mt-2 max-w-[620px] text-sm font-bold leading-relaxed text-ink/85 max-sm:text-[13px] max-sm:leading-6 sm:text-[1.05rem]">
+              Yoga Phong Thái là sự giao thoa giữa <strong className="font-extrabold text-sage">80% yếu tố bên trong</strong> và <strong className="font-extrabold text-sage">20% yếu tố bên ngoài</strong>: từ trí tuệ, tâm thái đến cử chỉ, ứng xử và ngôn ngữ cơ thể.
+            </p>
+          </div>
+        </div>
+        <div className="mt-8 grid grid-cols-3 border-t border-[rgba(63,107,74,0.12)] pt-5 max-sm:mt-5 max-sm:pt-4" aria-label="Thông tin chương trình">
+          {heroStats.map((item, index) => (
+            <div className={`${index === 0 ? "pr-4" : "border-l border-[rgba(63,107,74,0.12)] px-4"} ${index === 2 ? "pr-0" : ""}`} key={item.value}>
+              <strong className="block text-[0.82rem] font-extrabold uppercase tracking-[0.13em] text-gold-deep max-sm:text-[0.68rem]">{item.value}</strong>
+              <span className="mt-1 block text-xs font-extrabold leading-snug text-ink/85 max-sm:text-[0.7rem] sm:text-[0.95rem]">{item.label}</span>
             </div>
           ))}
         </div>
       </div>
-      <div aria-label="Ảnh Master Thu Nhanh">
+      <div className="mx-auto w-full max-w-[520px] max-sm:max-w-[330px] lg:max-w-none" aria-label="Ảnh Master Thu Nhanh">
         <div className="relative overflow-hidden rounded-t-[250px] rounded-b-[34px] border border-[rgba(63,107,74,0.12)] bg-surface p-3.5">
-          <div className="relative grid h-[760px] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-t-[220px] rounded-b-3xl border border-[rgba(63,107,74,0.16)] bg-surface-low pb-[18px] shadow-soft max-lg:h-[780px] max-sm:h-[720px] max-sm:pb-3.5">
+          <p className="absolute left-6 top-24 z-20 hidden max-w-[128px] rounded-lg border border-[rgba(122,94,6,0.22)] bg-cream/92 px-3 py-2 text-xs font-extrabold uppercase leading-snug tracking-[0.12em] text-gold-deep shadow-[0_14px_30px_rgba(32,52,35,0.12)] lg:block">
+            Lắng nghe cơ thể
+          </p>
+          <div className="relative h-[720px] overflow-hidden rounded-t-[220px] rounded-b-3xl border border-[rgba(63,107,74,0.16)] bg-surface-low shadow-soft max-lg:h-[740px] max-sm:h-[420px]">
             <Image
               className="relative z-10 h-full min-h-0 w-full object-cover object-top"
               src="/anh-ghep/yoga-phong-thai-mau1-goc2.png"
@@ -44,10 +63,6 @@ export function HeroSection() {
               height={1200}
               priority
             />
-            <blockquote className="relative z-10 mx-auto w-[calc(100%_-_34px)] border-l-4 border-gold bg-cream px-4 py-3.5 text-sm font-semibold leading-normal text-sage shadow-[0_18px_40px_rgba(32,52,35,0.12)] max-sm:w-[calc(100%_-_24px)]">
-              “Hơi thở là cây cầu đưa phụ nữ trở về với sự bình an và khí chất của chính mình.”
-              <cite className="mt-2 block text-xs font-extrabold not-italic text-muted">Master Thu Nhanh</cite>
-            </blockquote>
           </div>
         </div>
       </div>

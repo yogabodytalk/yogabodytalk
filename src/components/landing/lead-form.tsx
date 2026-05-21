@@ -16,13 +16,13 @@ export function LeadForm() {
 
     if (!name || !phone || !program) {
       setSuccess(false);
-      setNote("Vui lòng điền đủ thông tin để được tư vấn đúng lộ trình.");
+      setNote("Vui lòng điền đủ thông tin để nhận lộ trình phù hợp.");
       return;
     }
 
-    const message = `Chào Master Thu Nhanh, tôi là ${name}. Tôi muốn được tư vấn ${program}. SĐT của tôi: ${phone}.`;
+    const message = `Chào Master Thu Nhanh, tôi là ${name}. Tôi muốn nhận gợi ý lộ trình ${program}. SĐT của tôi: ${phone}.`;
     setSuccess(true);
-    setNote("Đã ghi nhận thông tin. Mở Zalo để gửi nhanh.");
+    setNote("Đã ghi nhận. Đang mở Zalo để gửi nhanh.");
     window.open(`https://zalo.me/0962895314?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }
 
@@ -68,7 +68,7 @@ export function LeadForm() {
         className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-6 font-extrabold leading-none text-white shadow-[0_14px_28px_rgba(63,107,74,0.18)] transition hover:-translate-y-px"
         type="submit"
       >
-        Gửi thông tin tư vấn
+        Gửi thông tin & mở Zalo
       </button>
       <p className={success ? "text-sm font-bold text-sage" : "text-sm text-muted"} aria-live="polite">
         {note}
