@@ -10,7 +10,7 @@ export function FloatingZaloLink() {
 
     const updateVisibility = () => {
       frame = 0;
-      setShowScrollTop(window.scrollY > 520);
+      setShowScrollTop(window.scrollY > 180);
     };
 
     const scheduleUpdate = () => {
@@ -38,7 +38,7 @@ export function FloatingZaloLink() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3 max-sm:bottom-4 max-sm:right-4 max-sm:gap-2.5" aria-label="Hành động nhanh">
+    <div className="floating-action-stack fixed bottom-5 right-5 z-[70] flex flex-col items-end gap-3 max-sm:gap-2.5" aria-label="Hành động nhanh">
       <button
         className={`floating-scroll-top inline-flex h-12 w-12 items-center justify-center rounded-full border border-sage/15 bg-cream/95 text-sage shadow-[0_14px_34px_rgba(32,52,35,0.16)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white focus:outline-none focus:ring-2 focus:ring-gold/70 focus:ring-offset-2 focus:ring-offset-cream ${
           showScrollTop ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"

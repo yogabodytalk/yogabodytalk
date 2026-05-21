@@ -147,6 +147,11 @@ select {
   animation: zalo-soft-pulse 4.8s ease-in-out infinite;
 }
 
+.floating-action-stack {
+  bottom: max(1.25rem, calc(env(safe-area-inset-bottom) + 1rem));
+  right: max(1.25rem, calc(env(safe-area-inset-right) + 1rem));
+}
+
 .floating-zalo-action {
   isolation: isolate;
   position: relative;
@@ -236,6 +241,11 @@ select {
 }
 
 @media (max-width: 640px) {
+  .floating-action-stack {
+    bottom: max(1rem, calc(env(safe-area-inset-bottom) + 1rem));
+    right: max(1rem, calc(env(safe-area-inset-right) + 1rem));
+  }
+
   .motion-ready [data-motion] {
     --motion-y: 12px;
     transition-duration: 520ms;

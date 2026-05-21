@@ -82,7 +82,7 @@ test.describe("Yoga Phong Thai landing page", () => {
     const scrollTopButton = page.getByRole("button", { name: "Lên đầu trang" });
     await expect(scrollTopButton).toHaveCSS("opacity", "0");
 
-    await page.evaluate(() => window.scrollTo(0, 1400));
+    await page.evaluate(() => window.scrollTo(0, 240));
     await expect.poll(async () => scrollTopButton.evaluate((element) => getComputedStyle(element).opacity)).toBe("1");
 
     await scrollTopButton.click();
