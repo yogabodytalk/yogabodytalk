@@ -65,26 +65,43 @@ export function CoursesSection() {
           </div>
         </header>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 max-sm:mt-8 max-sm:flex max-sm:snap-x max-sm:gap-4 max-sm:overflow-x-auto max-sm:pb-4 max-sm:scroll-px-5 max-sm:[scrollbar-width:none] max-sm:[&::-webkit-scrollbar]:hidden md:grid-cols-3 md:items-stretch md:gap-3 lg:mt-16 lg:gap-6">
-          {coreCourses.map((course, index) => {
-            const isFeatured = index === 1;
+        <div className="mt-6 hidden items-center justify-between gap-3 rounded-full border border-[#285A38]/16 bg-white/78 px-3 py-2 text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-[#285A38] shadow-[0_14px_34px_rgba(40,90,56,0.07)] backdrop-blur max-sm:flex" aria-label="Gợi ý vuốt ngang để xem nhiều khóa học" data-motion="fade">
+          <span className="inline-flex min-w-0 items-center gap-2">
+            <span className="flex h-6 w-10 shrink-0 items-center justify-center rounded-full bg-[#e8c266]/28 text-[#775a01]" aria-hidden="true">
+              <svg className="course-swipe-cue-arrow h-4 w-4" fill="none" viewBox="0 0 24 24">
+                <path d="M5 12h12m0 0-4-4m4 4-4 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
+              </svg>
+            </span>
+            <span className="truncate">Vuốt ngang để xem 3 khóa</span>
+          </span>
+          <span className="flex shrink-0 items-center gap-1.5" aria-hidden="true">
+            <span className="h-1.5 w-5 rounded-full bg-[#285A38]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#285A38]/28" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#285A38]/28" />
+          </span>
+        </div>
 
-            return (
-              <article
-                className={`relative flex h-full flex-col rounded-xl bg-[#faf9f9] p-6 text-[#1a1c1c] transition-all duration-300 max-sm:w-[82vw] max-sm:shrink-0 max-sm:snap-center max-sm:p-5 md:min-h-[540px] md:p-4 lg:min-h-[615px] lg:p-8 ${
-                  isFeatured
-                    ? "featured-course border border-[#e8c266] shadow-[0_24px_64px_rgba(119,90,1,0.08)] lg:-translate-y-2"
-                    : "border border-[rgba(193,201,191,0.42)] hover:shadow-[0_24px_54px_rgba(40,90,56,0.07)]"
-                }`}
-                key={course.title}
-                data-motion="rise"
-                data-motion-delay={String(index * 90)}
-              >
-                {isFeatured ? (
-                  <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#e8c266] px-3 py-1 text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-[#251a00]">
-                    Phổ biến nhất
-                  </span>
-                ) : null}
+        <div className="relative mt-12 max-sm:mt-4 max-sm:after:pointer-events-none max-sm:after:absolute max-sm:after:bottom-4 max-sm:after:right-0 max-sm:after:top-0 max-sm:after:w-14 max-sm:after:bg-gradient-to-l max-sm:after:from-[#F6F5EF] max-sm:after:via-[#F6F5EF]/78 max-sm:after:to-transparent max-sm:after:content-[''] lg:mt-16">
+          <div className="grid grid-cols-1 gap-5 max-sm:flex max-sm:snap-x max-sm:gap-4 max-sm:overflow-x-auto max-sm:pt-3 max-sm:pb-4 max-sm:pr-14 max-sm:scroll-px-0 max-sm:[scrollbar-width:none] max-sm:[&::-webkit-scrollbar]:hidden md:grid-cols-3 md:items-stretch md:gap-3 lg:gap-6" aria-label="Các khóa học chính, có thể vuốt ngang trên mobile">
+            {coreCourses.map((course, index) => {
+              const isFeatured = index === 1;
+
+              return (
+                <article
+                  className={`relative flex h-full flex-col rounded-xl bg-[#faf9f9] p-6 text-[#1a1c1c] transition-all duration-300 max-sm:w-[74vw] max-sm:shrink-0 max-sm:snap-start max-sm:p-5 md:min-h-[540px] md:p-4 lg:min-h-[615px] lg:p-8 ${
+                    isFeatured
+                      ? "featured-course border border-[#e8c266] shadow-[0_24px_64px_rgba(119,90,1,0.08)] lg:-translate-y-2"
+                      : "border border-[rgba(193,201,191,0.42)] hover:shadow-[0_24px_54px_rgba(40,90,56,0.07)]"
+                  }`}
+                  key={course.title}
+                  data-motion="rise"
+                  data-motion-delay={String(index * 90)}
+                >
+                  {isFeatured ? (
+                    <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#e8c266] px-3 py-1 text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-[#251a00]">
+                      Phổ biến nhất
+                    </span>
+                  ) : null}
 
                 <div className="flex items-center gap-3">
                   <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full md:h-9 md:w-9 lg:h-10 lg:w-10 ${isFeatured ? "bg-[#775a01]/10 text-[#775a01]" : "bg-[#eeeeed] text-[#285A38]"}`}>
@@ -144,9 +161,10 @@ export function CoursesSection() {
                     {course.cta}
                   </a>
                 </div>
-              </article>
-            );
-          })}
+                </article>
+              );
+            })}
+          </div>
         </div>
 
         <article className="relative mt-12 overflow-hidden rounded-xl bg-[#285A38] p-7 text-white max-sm:mt-7 max-sm:p-5 md:mt-14 md:p-10 lg:p-16" data-motion="scale">

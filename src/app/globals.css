@@ -187,6 +187,10 @@ select {
   will-change: opacity, transform;
 }
 
+.course-swipe-cue-arrow {
+  animation: course-swipe-cue 1.8s ease-in-out infinite;
+}
+
 @keyframes bodytalk-breath {
   0%,
   100% {
@@ -194,6 +198,16 @@ select {
   }
   50% {
     transform: scale(1.018);
+  }
+}
+
+@keyframes course-swipe-cue {
+  0%,
+  100% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(3px);
   }
 }
 

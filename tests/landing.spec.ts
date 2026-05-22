@@ -89,6 +89,45 @@ test.describe("Yoga Phong Thai landing page", () => {
     await expect.poll(async () => page.evaluate(() => window.scrollY)).toBeLessThan(30);
   });
 
+  test("makes the mobile course carousel discoverable", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto("/#courses");
+
+    await expect(page.getByText("Vuốt ngang để xem 3 khóa")).toBeVisible();
+
+    const courseScroller = page.locator("#courses [aria-label='Các khóa học chính, có thể vuốt ngang trên mobile']");
+    await expect(courseScroller).toBeVisible();
+
+    const metrics = await courseScroller.evaluate((element) => {
+      const cards = Array.from(element.children).map((child) => {
+        const rect = child.getBoundingClientRect();
+        const parentRect = element.getBoundingClientRect();
+
+        return {
+          left: rect.left - parentRect.left,
+          width: rect.width,
+        };
+      });
+      const badge = Array.from(element.querySelectorAll("span")).find((node) => node.textContent?.trim() === "Phổ biến nhất");
+      const badgeRect = badge?.getBoundingClientRect();
+      const elementRect = element.getBoundingClientRect();
+
+      return {
+        cardCount: cards.length,
+        clientWidth: element.clientWidth,
+        scrollWidth: element.scrollWidth,
+        secondCardLeft: cards[1]?.left ?? 0,
+        badgeTop: badgeRect?.top ?? 0,
+        scrollerTop: elementRect.top,
+      };
+    });
+
+    expect(metrics.cardCount).toBe(3);
+    expect(metrics.scrollWidth).toBeGreaterThan(metrics.clientWidth + 40);
+    expect(metrics.secondCardLeft).toBeLessThan(metrics.clientWidth);
+    expect(metrics.badgeTop).toBeGreaterThanOrEqual(metrics.scrollerTop);
+  });
+
   test("validates lead form and builds the Zalo message", async ({ page, context }) => {
     await page.goto("/");
 
