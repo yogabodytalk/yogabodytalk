@@ -28,7 +28,7 @@ export function LeadForm() {
 
   return (
     <form className="grid gap-3" onSubmit={handleSubmit} noValidate>
-      <label className="grid gap-2 text-sm font-bold text-sage">
+      <label className="grid gap-2 text-sm font-semibold text-sage">
         Họ tên
         <input
           className="min-h-12 rounded-lg border border-[rgba(114,121,113,0.32)] bg-white px-4 text-base font-medium text-ink"
@@ -39,7 +39,7 @@ export function LeadForm() {
           placeholder="Tên của bạn"
         />
       </label>
-      <label className="grid gap-2 text-sm font-bold text-sage">
+      <label className="grid gap-2 text-sm font-semibold text-sage">
         Số điện thoại
         <input
           className="min-h-12 rounded-lg border border-[rgba(114,121,113,0.32)] bg-white px-4 text-base font-medium text-ink"
@@ -50,7 +50,7 @@ export function LeadForm() {
           placeholder="09xx xxx xxx"
         />
       </label>
-      <label className="grid gap-2 text-sm font-bold text-sage">
+      <label className="grid gap-2 text-sm font-semibold text-sage">
         Lộ trình quan tâm
         <select
           className="min-h-12 rounded-lg border border-[rgba(114,121,113,0.32)] bg-white px-4 text-base font-medium text-ink"
@@ -65,12 +65,12 @@ export function LeadForm() {
         </select>
       </label>
       <button
-        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-6 font-extrabold leading-none text-white shadow-[0_14px_28px_rgba(63,107,74,0.18)] transition hover:-translate-y-px"
+        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-6 font-bold leading-none text-white shadow-[0_14px_28px_rgba(63,107,74,0.18)] transition hover:-translate-y-px"
         type="submit"
       >
         Gửi thông tin & mở Zalo
       </button>
-      <p className={success ? "text-sm font-bold text-sage" : "text-sm text-muted"} aria-live="polite">
+      <p className={success ? "text-sm font-semibold text-sage" : "text-sm text-muted"} aria-live="polite">
         {note}
       </p>
     </form>

@@ -24,23 +24,23 @@ export function PainSection() {
         <div className="mx-auto max-w-3xl text-center max-sm:text-left" data-motion="rise">
           <p className={eyebrow}>Nhận diện vấn đề</p>
           <h2 id="pain-title" className={heading}>
-            Dấu hiệu cơ thể đang lên tiếng.
+            Cơ thể đã nói trước khi bạn thấy dáng mình đổi khác.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-muted md:text-base">
-            Khi trục dáng lệch, hơi thở nông và cơ thể thiếu linh hoạt, phong thái bên ngoài cũng mất đi sự nhẹ nhàng. Yoga Phong Thái bắt đầu bằng việc đọc lại những tín hiệu đó.
+            Vai khép, cổ căng, hơi thở ngắn hay dáng đứng thiếu lực đều là tín hiệu. BODY TALK bắt đầu từ việc đọc đúng tín hiệu, rồi mới chọn bài tập và lộ trình phù hợp.
           </p>
         </div>
 
-        <div className="relative mt-12 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-surface-low/80 shadow-[0_24px_70px_rgba(32,52,35,0.06)] max-sm:mt-7" data-motion="scale">
+        <div className="relative mt-10 overflow-hidden rounded-lg border border-[rgba(122,94,6,0.22)] bg-white/70 shadow-[0_24px_70px_rgba(32,52,35,0.06)] max-sm:mt-7" data-motion="scale">
           <div className="absolute inset-x-8 top-0 h-px bg-gold/70" aria-hidden="true" />
-          <div className="grid grid-cols-2 md:grid-cols-2">
+          <div className="grid grid-cols-2 md:grid-cols-4">
             {painPoints.map((item, index) => (
-              <article className={`border-[rgba(122,94,6,0.22)] p-6 max-sm:p-4 sm:p-8 md:min-h-56 ${cellBorders[index]}`} key={item.number}>
-                <div className="flex items-start gap-5 max-sm:flex-col max-sm:gap-2">
-                  <span className="font-serif text-[2.75rem] leading-none text-gold-deep/35 max-sm:text-3xl md:text-6xl">{item.number}</span>
-                  <div className="pt-1">
-                    <h3 className="font-serif text-2xl leading-tight text-sage max-sm:text-[1.08rem] md:text-[1.7rem]">{item.title}</h3>
-                    <p className="mt-4 max-w-md text-sm leading-7 text-muted max-sm:mt-2 max-sm:text-[12.5px] max-sm:leading-5 md:text-[15px]">{item.body}</p>
+              <article className={`border-[rgba(122,94,6,0.18)] p-5 max-sm:p-4 sm:p-6 md:min-h-64 md:border-r ${index === 3 ? "md:border-r-0" : ""} ${cellBorders[index]}`} key={item.number}>
+                <div className="flex h-full flex-col">
+                  <span className="font-serif text-[2.4rem] leading-none text-gold-deep/38 max-sm:text-3xl md:text-[3.2rem]">{item.number}</span>
+                  <div className="mt-5 max-sm:mt-3">
+                    <h3 className="font-serif text-xl leading-tight text-sage max-sm:text-[1.05rem] md:text-[1.35rem]">{item.title}</h3>
+                    <p className="mt-3 max-w-md text-sm leading-6 text-muted max-sm:text-[12.5px] max-sm:leading-5">{item.body}</p>
                   </div>
                 </div>
               </article>

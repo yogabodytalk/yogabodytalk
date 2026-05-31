@@ -2,6 +2,7 @@ export const navItems = [
   { label: "Phương pháp", href: "#method" },
   { label: "Lộ trình", href: "#courses" },
   { label: "Hành trình", href: "#journey" },
+  { label: "Camp/Retreat", href: "#retreats" },
   { label: "Master", href: "#master" },
   { label: "Tư vấn", href: "#contact" },
 ] as const;
@@ -20,9 +21,9 @@ export const painPoints = [
 ] as const;
 
 export const methodPillars = [
-  { label: "Hơi thở", title: "Làm chủ nguồn năng lượng", body: "Đưa nhịp thở sâu trở lại để mở ngực, định tâm và giải phóng căng thẳng." },
-  { label: "Trục dáng", title: "Cân chỉnh cấu trúc cơ thể", body: "Định tuyến cổ, vai, cột sống, hông để vóc dáng cân đối và chuyển động nhẹ hơn." },
-  { label: "Phong thái", title: "Tỏa sáng từ sự tự tin bên trong", body: "Rèn dáng đi, dáng đứng, ánh nhìn và khí chất thanh lịch trong đời sống hằng ngày." },
+  { label: "Hơi thở", title: "Đọc tín hiệu", body: "Đưa nhịp thở sâu trở lại để cơ thể bớt căng, ngực mở hơn và tâm trí có điểm tựa." },
+  { label: "Trục dáng", title: "Cân chỉnh bộ khung", body: "Định tuyến cổ, vai, cột sống, hông để vóc dáng cân đối và chuyển động nhẹ hơn." },
+  { label: "Phong thái", title: "Duy trì khí chất", body: "Rèn dáng đi, dáng đứng, ánh nhìn và nhịp hiện diện để kết quả đi vào đời sống." },
 ] as const;
 
 export const courses = [
@@ -38,7 +39,7 @@ export const courses = [
     items: ["Hơi thở và mở ngực", "Linh hoạt vai, cổ, hông", "Dáng đứng và dáng ngồi"],
     highlight: "Phù hợp để bắt đầu nhẹ nhàng, hiểu cơ thể và sửa những thói quen cơ bản.",
     offer: "",
-    cta: "Bắt đầu 12 ngày với 968K",
+    cta: "Bắt đầu khóa nền tảng",
     featured: false,
   },
   {
@@ -83,7 +84,7 @@ export const courses = [
     items: ["Đào tạo chuyên môn", "Đồng hành vận hành", "Chuyển giao hệ thống"],
     highlight: "Lộ trình riêng cho người muốn học sâu, được kèm sát và chuyển giao hệ thống.",
     offer: "",
-    cta: "Đặt lịch trao đổi nhượng quyền",
+    cta: "Trao đổi lộ trình HLV",
     featured: false,
   },
 ] as const;
@@ -111,6 +112,62 @@ export const journeySteps = [
   { number: "02", title: "Xây lại bộ khung và hơi thở", body: "Nắn chỉnh cổ, vai, cột sống, hông và đưa nhịp thở sâu trở lại làm nền." },
   { number: "03", title: "Nạp đúng nhiên liệu sống", body: "Điều chỉnh dinh dưỡng, nhịp sinh hoạt và năng lượng phục hồi theo từng cơ địa." },
   { number: "04", title: "Cầm lái phong thái mới", body: "Rèn tư duy, thiền định và hiện diện để thân - tâm - trí đi đúng hướng lâu dài." },
+] as const;
+
+export const retreatHighlights = [
+  {
+    eyebrow: "Đi chữa lành",
+    title: "Rời nhịp sống căng để nghe lại cơ thể",
+    body: "Không gian tách khỏi lịch làm việc dày đặc, giúp bạn chậm lại, thở sâu hơn và nhận ra điều cơ thể đang báo hiệu.",
+  },
+  {
+    eyebrow: "Thải độc nhịp sống",
+    title: "Reset ăn uống, nghỉ ngơi và năng lượng",
+    body: "Tập trung vào nhịp sinh hoạt nhẹ hơn: vận động vừa sức, bữa ăn lành mạnh, ngủ nghỉ và giảm kích thích quá tải.",
+  },
+  {
+    eyebrow: "Đi camp",
+    title: "Trải nghiệm cùng cộng đồng BODY TALK",
+    body: "Cùng luyện thở, chuyển động, chia sẻ và giữ động lực trong một nhóm có cùng mong muốn chăm sóc thân - tâm - trí.",
+  },
+] as const;
+
+export const retreatRhythm = [
+  { time: "Sáng", title: "Đánh thức cơ thể", body: "Thở, mở khớp, đi bộ nhẹ và quan sát vùng căng." },
+  { time: "Trưa", title: "Nạp đúng nhiên liệu", body: "Body Meal nhẹ, nước, nghỉ sâu và điều chỉnh nhịp năng lượng." },
+  { time: "Chiều", title: "Cân chỉnh & phục hồi", body: "Chuyển động chậm, giãn cơ, thả lỏng và chăm sóc cảm nhận cơ thể." },
+  { time: "Tối", title: "Lắng xuống", body: "Thiền, viết cảm nhận và đặt lại ý định sau chuyến đi." },
+] as const;
+
+export const retreatFit = [
+  "Người đang mệt vì áp lực công việc, lịch sinh hoạt dày và khó tự nghỉ đúng cách.",
+  "Người muốn trải nghiệm BODY TALK trước khi đi vào lộ trình dài hơn.",
+  "Người cần một cộng đồng nhẹ nhàng để bắt đầu lại thói quen vận động, ăn uống và lắng nghe cơ thể.",
+] as const;
+
+export const lifeHousePillars = ["Sức khỏe", "Nội tâm", "Mối quan hệ", "Tài chính"] as const;
+
+export const ecosystemOfferings = [
+  {
+    kicker: "Học",
+    title: "Khóa học BODY TALK",
+    body: "Nền tảng, 30 ngày chỉnh dáng và 90 ngày Thân - Tâm - Trí để chọn đúng điểm bắt đầu.",
+  },
+  {
+    kicker: "Hồi phục",
+    title: "Phòng hồi phục cơ thể",
+    body: "Không gian hỗ trợ thả lỏng, lắng nghe và chăm sóc cảm nhận cơ thể sau vận động hoặc căng thẳng.",
+  },
+  {
+    kicker: "Trải nghiệm",
+    title: "Camp, Retreat & thải độc nhịp sống",
+    body: "Những ngày rời nhịp sống thường ngày để luyện thở, chuyển động, ăn uống nhẹ và kết nối sâu hơn.",
+  },
+  {
+    kicker: "Duy trì",
+    title: "Video, Body Meal & cộng đồng",
+    body: "Tài nguyên học, gợi ý dinh dưỡng và cộng đồng giúp thói quen mới không bị đứt đoạn.",
+  },
 ] as const;
 
 export const learningTracks = [
@@ -157,7 +214,7 @@ export const faqs = [
   {
     question: "Tôi nên bắt đầu từ lộ trình nào?",
     answer:
-      "4 tuần dành cho nền tảng hơi thở và trục dáng. 30 ngày phù hợp khi cần chỉnh dáng sâu. 90 ngày dành cho hành trình Thân - Tâm - Trí bền hơn.",
+      "Nếu chưa rõ tình trạng, hãy gửi thông tin trước để được soi điểm bắt đầu. 12 ngày dành cho nền tảng hơi thở và trục dáng. 30 ngày phù hợp khi cần chỉnh sâu. 90 ngày dành cho hành trình Thân - Tâm - Trí bền hơn.",
   },
   {
     question: "BODY TALK khác gì yoga thông thường?",
@@ -169,6 +226,11 @@ export const faqs = [
     answer:
       "Cô quan sát hơi thở, trục dáng, vai cổ gáy và nhịp sống hiện tại để gợi ý điểm bắt đầu phù hợp. Khi vào lộ trình, phần điều chỉnh sẽ đi theo tình trạng cơ thể thật của từng học viên.",
   },
+  {
+    question: "Camp, retreat hoặc thải độc nhịp sống dành cho ai?",
+    answer:
+      "Đây là điểm chạm bổ trợ cho người muốn tạm rời nhịp sống căng, lắng nghe cơ thể, ăn uống nhẹ hơn và duy trì thói quen chăm sóc thân - tâm. Nội dung được tư vấn theo tình trạng thực tế, không thay thế chẩn đoán hay điều trị y khoa.",
+  },
 ] as const;
 
-export const programs = ["Yoga Phong Thái Cơ Bản", "30 Ngày Chỉnh Dáng", "90 Ngày Thân Tâm Trí", "Đào Tạo HLV & Nhượng Quyền"] as const;
+export const programs = ["Chưa rõ, cần soi tình trạng", "Yoga Phong Thái Cơ Bản", "30 Ngày Chỉnh Dáng", "90 Ngày Thân Tâm Trí", "Camp / Retreat / Thải độc nhịp sống", "Phòng hồi phục cơ thể", "Đào Tạo HLV & Nhượng Quyền"] as const;

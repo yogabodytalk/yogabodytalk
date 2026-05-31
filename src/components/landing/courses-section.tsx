@@ -47,25 +47,25 @@ export function CoursesSection() {
     <section className="bg-[#F6F5EF] pt-20 pb-10 max-sm:pt-12 max-sm:pb-8 md:pt-20 md:pb-12 lg:pt-[120px]" id="courses" aria-labelledby="courses-title">
       <div className="mx-auto w-[min(1200px,calc(100%_-_40px))]">
         <header className="mx-auto max-w-3xl text-center max-sm:text-left" data-motion="rise">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b08a1c]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-[#b08a1c]">
             Lộ trình Body Talk
           </p>
-          <h2 id="courses-title" className="font-serif text-[clamp(2rem,3.4vw,3rem)] font-bold leading-[1.1] text-[#285A38] max-sm:text-[1.85rem]">
-            Cơ thể bạn đang ở đâu, hãy bắt đầu từ đó.
+          <h2 id="courses-title" className="font-serif text-[clamp(1.9rem,3.1vw,2.7rem)] font-medium leading-[1.16] text-[#285A38] max-sm:text-[1.75rem]">
+            Chọn khóa theo điểm cơ thể đang cần.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-[#414941] max-sm:mt-4 max-sm:text-sm max-sm:leading-6 lg:mt-6 lg:text-[clamp(1rem,1.4vw,1.125rem)] lg:leading-[1.7]">
-            Chọn khóa phù hợp với nhịp thở, trục dáng và mức độ sẵn sàng của bạn. Mỗi lộ trình là một bước tiến rõ ràng hơn về sự cân bằng, khí chất và phong thái.
+            Nếu cơ thể mới bắt đầu lên tiếng, hãy đi từ nền tảng. Nếu dáng đã lệch rõ, chọn chỉnh sâu. Nếu muốn thay đổi bền hơn, đi theo lộ trình thân - tâm - trí.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-2.5 max-sm:mt-5 max-sm:justify-start max-sm:gap-2" aria-label="Định hướng lộ trình">
-            {["Mới bắt đầu", "Chỉnh dáng sâu", "Truyền nhân"].map((label) => (
-              <span className="rounded-full border border-[#285A38]/18 bg-white/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-[#285A38] shadow-[0_10px_24px_rgba(40,90,56,0.05)] max-sm:px-3 max-sm:py-1.5 max-sm:text-[0.65rem]" key={label}>
+            {["Nền tảng hơi thở", "Chỉnh dáng sâu", "Toàn diện 90 ngày"].map((label) => (
+              <span className="rounded-full border border-[#285A38]/18 bg-white/65 px-4 py-2 text-xs font-semibold uppercase tracking-[0.09em] text-[#285A38] shadow-[0_10px_24px_rgba(40,90,56,0.05)] max-sm:px-3 max-sm:py-1.5 max-sm:text-[0.65rem]" key={label}>
                 {label}
               </span>
             ))}
           </div>
         </header>
 
-        <div className="mt-6 hidden items-center justify-between gap-3 rounded-full border border-[#285A38]/16 bg-white/78 px-3 py-2 text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-[#285A38] shadow-[0_14px_34px_rgba(40,90,56,0.07)] backdrop-blur max-sm:flex" aria-label="Gợi ý vuốt ngang để xem nhiều khóa học" data-motion="fade">
+        <div className="mt-6 hidden items-center justify-between gap-3 rounded-full border border-[#285A38]/16 bg-white/78 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.09em] text-[#285A38] shadow-[0_14px_34px_rgba(40,90,56,0.07)] backdrop-blur max-sm:flex" aria-label="Gợi ý vuốt ngang để xem nhiều khóa học" data-motion="fade">
           <span className="inline-flex min-w-0 items-center gap-2">
             <span className="flex h-6 w-10 shrink-0 items-center justify-center rounded-full bg-[#e8c266]/28 text-[#775a01]" aria-hidden="true">
               <svg className="course-swipe-cue-arrow h-4 w-4" fill="none" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export function CoursesSection() {
                   data-motion-delay={String(index * 90)}
                 >
                   {isFeatured ? (
-                    <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#e8c266] px-3 py-1 text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-[#251a00]">
+                    <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#e8c266] px-3 py-1 text-[0.625rem] font-bold uppercase tracking-[0.09em] text-[#251a00]">
                       Phổ biến nhất
                     </span>
                   ) : null}
@@ -107,23 +107,23 @@ export function CoursesSection() {
                   <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full md:h-9 md:w-9 lg:h-10 lg:w-10 ${isFeatured ? "bg-[#775a01]/10 text-[#775a01]" : "bg-[#eeeeed] text-[#285A38]"}`}>
                     <CourseIcon name={course.icon} className="h-5 w-5 md:h-4 md:w-4 lg:h-5 lg:w-5" />
                   </div>
-                  <span className={`text-xs font-extrabold uppercase tracking-[0.14em] md:text-[0.68rem] md:tracking-[0.12em] lg:text-xs lg:tracking-[0.14em] ${isFeatured ? "text-[#775a01]" : "text-[#414941]"}`}>
+                  <span className={`text-xs font-semibold uppercase tracking-[0.1em] md:text-[0.68rem] md:tracking-[0.08em] lg:text-xs lg:tracking-[0.1em] ${isFeatured ? "text-[#775a01]" : "text-[#414941]"}`}>
                     {course.meta}
                   </span>
                 </div>
 
-                <h3 className="mt-5 max-w-[20rem] font-serif text-[1.65rem] font-semibold leading-[1.18] text-[#285A38] max-sm:text-[1.38rem] md:text-[1.32rem] md:leading-[1.16] lg:mt-6 lg:text-[2rem] lg:leading-[1.3]">
+                <h3 className="mt-5 max-w-[20rem] font-serif text-[1.58rem] font-medium leading-[1.24] text-[#285A38] max-sm:text-[1.32rem] md:text-[1.28rem] md:leading-[1.2] lg:mt-6 lg:text-[1.85rem] lg:leading-[1.28]">
                   {course.title}
                 </h3>
                 <p className="mt-2 text-[15px] leading-6 text-[#414941] md:text-[13px] md:leading-5 lg:text-base lg:leading-relaxed">{course.time}</p>
                 {course.badge ? (
-                  <span className="mt-4 inline-flex w-fit rounded bg-[#eeeeed] px-2 py-1 text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-[#414941] md:text-[0.56rem] lg:text-[0.625rem]">
+                  <span className="mt-4 inline-flex w-fit rounded bg-[#eeeeed] px-2 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.09em] text-[#414941] md:text-[0.56rem] lg:text-[0.625rem]">
                     {course.badge}
                   </span>
                 ) : null}
 
                 <div className="mt-6 md:mt-5 lg:mt-6">
-                  <strong className="block whitespace-nowrap font-serif text-[1.35rem] font-semibold leading-tight text-[#1a1c1c] md:text-[1.1rem] lg:text-2xl">
+                  <strong className="block whitespace-nowrap font-serif text-[1.28rem] font-medium leading-tight text-[#1a1c1c] md:text-[1.08rem] lg:text-[1.38rem]">
                     {course.price}
                   </strong>
                 </div>
@@ -144,14 +144,14 @@ export function CoursesSection() {
                 </ul>
 
                 {course.offer ? (
-                  <p className="mt-6 rounded-lg border border-[#e8c266]/50 bg-[#ffdf97]/20 p-4 text-sm font-bold leading-relaxed text-[#775a01] md:mt-5 md:p-3 md:text-[12px] md:leading-5 lg:mt-6 lg:p-4 lg:text-sm lg:leading-relaxed">
+                  <p className="mt-6 rounded-lg border border-[#e8c266]/50 bg-[#ffdf97]/20 p-4 text-sm font-semibold leading-relaxed text-[#775a01] md:mt-5 md:p-3 md:text-[12px] md:leading-5 lg:mt-6 lg:p-4 lg:text-sm lg:leading-relaxed">
                     {course.offer.replace("Tặng ngay ", "Tặng ").replace(", giãn cơ, đả thông kinh lạc", "")}
                   </p>
                 ) : null}
 
                 <div className="mt-auto pt-6 max-sm:pt-5 lg:pt-8">
                   <a
-                    className={`motion-cta inline-flex min-h-12 w-full items-center justify-center rounded-xl px-5 text-center text-[13px] font-extrabold uppercase transition md:min-h-11 md:px-3 md:text-[11px] md:leading-4 lg:min-h-12 lg:px-5 lg:text-sm ${
+                    className={`motion-cta inline-flex min-h-12 w-full items-center justify-center rounded-xl px-5 text-center text-[13px] font-bold uppercase transition md:min-h-11 md:px-3 md:text-[11px] md:leading-4 lg:min-h-12 lg:px-5 lg:text-sm ${
                       isFeatured
                         ? "bg-[#e8c266] text-[#251a00] hover:bg-[#ffdf97]"
                         : "border border-[#285A38] text-[#285A38] hover:bg-[#285A38]/5"
@@ -171,21 +171,21 @@ export function CoursesSection() {
           <div className="absolute inset-0 bg-[#285A38]" aria-hidden="true" />
           <div className="relative z-10 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center lg:gap-10">
             <div className="max-w-[760px]">
-              <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-[#e8c266]">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-[#e8c266]">
                 Lộ trình Truyền nhân riêng
               </p>
-              <h3 className="font-serif text-[clamp(2rem,3.4vw,3rem)] font-bold leading-[1.1] max-sm:text-[1.7rem]">
+              <h3 className="font-serif text-[clamp(1.85rem,3vw,2.65rem)] font-medium leading-[1.16] max-sm:text-[1.65rem]">
                 Truyền Nhân BODY TALK
               </h3>
               <p className="mt-4 text-[15px] leading-7 text-[#b8f0c3] max-sm:mt-3 max-sm:text-sm max-sm:leading-6 lg:text-[clamp(1rem,1.4vw,1.125rem)] lg:leading-[1.7]">
                 {mentorCourse.time} · {mentorCourse.priceNote}
               </p>
               <div className="mt-6 flex flex-col gap-5 max-sm:mt-4 max-sm:gap-4 sm:flex-row sm:items-center">
-                <strong className="whitespace-nowrap font-serif text-[1.5rem] font-semibold text-[#e8c266] lg:text-[clamp(1.5rem,2.4vw,2rem)]">
+                <strong className="whitespace-nowrap font-serif text-[1.42rem] font-medium text-[#e8c266] lg:text-[clamp(1.42rem,2.2vw,1.85rem)]">
                   {mentorCourse.price}
                 </strong>
                 <div className="hidden h-6 w-px bg-white/24 sm:block" aria-hidden="true" />
-                <ul className="flex flex-col gap-3 text-sm font-bold text-[#b8f0c3] max-sm:gap-2.5 sm:flex-row sm:gap-5">
+                <ul className="flex flex-col gap-3 text-sm font-semibold text-[#b8f0c3] max-sm:gap-2.5 sm:flex-row sm:gap-5">
                   {mentorCourse.items.map((item) => (
                     <li className="flex items-center gap-2" key={item}>
                       <svg className="h-4 w-4 shrink-0 text-[#e8c266]" fill="none" viewBox="0 0 24 24" aria-hidden="true">
@@ -197,11 +197,19 @@ export function CoursesSection() {
                 </ul>
               </div>
             </div>
-            <a className="motion-cta inline-flex min-h-12 w-full shrink-0 items-center justify-center rounded-xl bg-[#e8c266] px-8 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-[#251a00] transition hover:bg-[#ffdf97] lg:w-auto" href="#contact">
+            <a className="motion-cta inline-flex min-h-12 w-full shrink-0 items-center justify-center rounded-xl bg-[#e8c266] px-8 text-center text-sm font-bold uppercase tracking-[0.06em] text-[#251a00] transition hover:bg-[#ffdf97] lg:w-auto" href="#contact">
               {mentorCourse.cta}
             </a>
           </div>
         </article>
+        <div className="mt-6 flex flex-col gap-3 rounded-xl border border-[#285A38]/14 bg-white/70 p-5 text-[#285A38] shadow-[0_16px_40px_rgba(40,90,56,0.06)] max-sm:p-4 sm:flex-row sm:items-center sm:justify-between" data-motion="rise">
+          <p className="max-w-2xl text-sm font-semibold leading-6">
+            Chưa chắc nên chọn khóa nào? Gửi tình trạng cơ thể trước, đội ngũ sẽ gợi ý điểm bắt đầu phù hợp.
+          </p>
+          <a className="motion-cta inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg bg-[#285A38] px-5 text-sm font-bold text-white transition hover:-translate-y-px" href="#contact">
+            Gửi tình trạng cơ thể
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -9,14 +9,19 @@ export function MethodSection() {
         <div className="flex flex-col gap-6 max-sm:gap-4" data-motion="rise">
           <div className="flex items-center gap-4">
             <span className="h-px w-8 bg-gold/55" aria-hidden="true" />
-            <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gold-deep">Phương pháp BODY TALK</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">Phương pháp BODY TALK</p>
           </div>
           <h2 id="method-title" className={heading}>
-            Ba trụ cột cho vẻ đẹp bền vững.
+            Từ tín hiệu cơ thể đến lộ trình phù hợp.
           </h2>
           <p className="max-w-lg text-[15px] leading-7 text-muted md:text-base">
-            BODY TALK không chỉ dạy động tác. Phương pháp này giúp học viên hiểu cách cơ thể vận hành, đưa cột sống về trục thẳng và biến sự kỷ luật thành phong thái sống.
+            BODY TALK không bắt đầu bằng động tác khó. Phương pháp này đọc hơi thở, chỉnh lại bộ khung và biến cách bạn đứng, đi, thở thành một phong thái có thể duy trì.
           </p>
+          <div className="grid gap-2 rounded-lg border border-gold/20 bg-cream/70 p-3 text-xs font-semibold uppercase leading-5 tracking-[0.09em] text-sage/80 max-sm:grid-cols-1 sm:grid-cols-3 lg:grid-cols-1">
+            <span>01 Đọc tín hiệu</span>
+            <span>02 Cân chỉnh trục</span>
+            <span>03 Chọn lộ trình</span>
+          </div>
         </div>
 
         <div className="relative flex justify-center lg:order-3 lg:justify-end" data-motion="scale" data-motion-delay="120">
@@ -45,7 +50,7 @@ export function MethodSection() {
               data-motion-delay={String(index * 90)}
             >
               <span className="absolute -left-[37px] top-1 h-2.5 w-2.5 rounded-full border-2 border-cream bg-gold max-sm:hidden" aria-hidden="true" />
-              <span className="mb-3 block text-xs font-extrabold uppercase tracking-[0.14em] text-gold-deep">
+              <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.1em] text-gold-deep">
                 {String(index + 1).padStart(2, "0")} / {item.title}
               </span>
               <h3 className="font-serif text-2xl leading-tight text-sage max-sm:text-xl md:text-[1.8rem]">{item.label}</h3>

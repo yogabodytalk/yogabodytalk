@@ -25,12 +25,12 @@ export function LearningSection() {
               height={900}
               loading="eager"
             />
-            <span className="absolute left-4 top-4 rounded-lg bg-gold px-4 py-2 text-xs font-extrabold uppercase tracking-[0.08em] text-ink">
+            <span className="absolute left-4 top-4 rounded-lg bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-[0.06em] text-ink">
               Bài học mẫu
             </span>
           </div>
           <div className="p-6">
-            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-gold-deep">Module mở đầu</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.09em] text-gold-deep">Module mở đầu</p>
             <h3 className="mt-2 font-serif text-3xl text-sage">Bài học mẫu: Hơi thở mở ngực</h3>
             <ul className="mt-4 grid gap-2 text-muted">
               <li>Giải phóng căng thẳng vùng vai gáy và ngực trên.</li>
@@ -42,10 +42,10 @@ export function LearningSection() {
         <div className="grid gap-4" aria-label="Các lộ trình học BODY TALK">
           {learningTracks.map((track) => (
             <article className={`rounded-xl border p-5 ${track.muted ? "border-dashed border-[rgba(114,121,113,0.32)] bg-white/50" : "border-[rgba(114,121,113,0.32)] bg-white/70"}`} key={track.title}>
-              <span className="font-extrabold text-gold-deep">{track.count}</span>
+              <span className="font-semibold text-gold-deep">{track.count}</span>
               <h3 className="mt-2 font-serif text-2xl text-sage">{track.title}</h3>
               <p className="mt-2 text-muted">{track.body}</p>
-              <small className="mt-4 block font-extrabold text-sage">{track.status}</small>
+              <small className="mt-4 block font-semibold text-sage">{track.status}</small>
             </article>
           ))}
         </div>

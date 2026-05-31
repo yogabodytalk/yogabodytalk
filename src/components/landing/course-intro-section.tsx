@@ -14,29 +14,25 @@ export function CourseIntroSection() {
             height={1920}
             loading="eager"
           />
-          <button
-            className="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/60 bg-sage/90 max-sm:h-11 max-sm:w-11 lg:h-[74px] lg:w-[74px]"
-            type="button"
-            aria-label="Video giới thiệu sẽ cập nhật"
-          >
-            <span className="ml-1 block h-0 w-0 border-y-[9px] border-l-[14px] border-y-transparent border-l-white lg:border-y-[12px] lg:border-l-[18px]" />
-          </button>
+          <div className="absolute inset-x-4 bottom-4 rounded-lg border border-white/50 bg-cream/92 px-4 py-3 text-xs font-semibold uppercase leading-snug tracking-[0.09em] text-sage shadow-[0_18px_36px_rgba(32,52,35,0.14)]">
+            Học bằng cơ thể thật, vấn đề thật
+          </div>
         </div>
         <div data-motion="rise" data-motion-delay="120">
           <p className={eyebrow}>Học cùng BODY TALK</p>
           <h2 id="course-hero-title" className={heading}>
-            Một hệ sinh thái học dáng, hơi thở và phong thái.
+            Một lộ trình để hiểu cơ thể, không chỉ học động tác.
           </h2>
           <p className="mt-5 text-lg text-muted max-sm:mt-4 max-sm:text-[15px] max-sm:leading-7">
-            Trang học được xây dựng theo hướng bán khóa học, video luyện tập và tư vấn cá nhân: học viên có thể bắt đầu từ lớp cơ bản, đi sâu vào chỉnh dáng 30 ngày hoặc theo đuổi lộ trình 90 ngày để tái thiết thân - tâm - trí.
+            BODY TALK giúp bạn nhìn lại hơi thở, trục dáng, năng lượng và thói quen sống như một hệ thống. Từ đó, bạn chọn đúng điểm bắt đầu thay vì tập rời rạc theo cảm hứng.
           </p>
           <ul className="mt-5 grid gap-2 text-muted max-sm:mt-4 max-sm:text-sm max-sm:leading-6">
-            <li>Video luyện tập theo từng nhóm vấn đề cơ thể.</li>
-            <li>Mentor chỉnh lỗi tư thế trong lớp nhỏ hoặc cá nhân.</li>
-            <li>Tài liệu học tập được hệ thống từ BODY TALK Ecosystem.</li>
+            <li>Lớp nền tảng để mở hơi thở và nhận diện lệch trục.</li>
+            <li>Lớp nhỏ hoặc cá nhân để mentor chỉnh lỗi tư thế sát hơn.</li>
+            <li>Lộ trình 90 ngày kết nối thân, tâm, trí và phong thái sống.</li>
           </ul>
           <a className={`${primaryButton} mt-7 max-sm:mt-5`} href="#courses">
-            Chọn lộ trình học
+            Xem lộ trình phù hợp
           </a>
         </div>
       </div>

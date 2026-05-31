@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
+import { Lora, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yogaphongthai.vercel.app";
 const socialImage = "/og/yoga-phong-thai-sale-thumbnail.png";
+
+const displaySerif = Lora({
+  display: "swap",
+  subsets: ["vietnamese"],
+  variable: "--font-serif",
+  weight: ["400", "500", "600", "700"],
+});
+
+const bodySans = Nunito_Sans({
+  display: "swap",
+  subsets: ["vietnamese"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,7 +52,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body className={`${displaySerif.variable} ${bodySans.variable}`}>{children}</body>
     </html>
   );
 }

@@ -5,12 +5,23 @@ test.describe("Yoga Phong Thai landing page", () => {
     await page.goto("/");
 
     await expect(page.getByRole("heading", { name: "Đẹp từ trục cơ thể. Sang từ phong thái." })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Soi dáng miễn phí ngay" }).first()).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Ba trụ cột cho vẻ đẹp bền vững." })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Cơ thể bạn đang ở đâu, hãy bắt đầu từ đó." })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Soi dáng miễn phí qua Zalo" }).first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Một lộ trình để hiểu cơ thể, không chỉ học động tác." })).toBeVisible();
+    await expect(page.getByText("Video giới thiệu sẽ cập nhật")).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "Cơ thể đã nói trước khi bạn thấy dáng mình đổi khác." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Từ tín hiệu cơ thể đến lộ trình phù hợp." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Chọn khóa theo điểm cơ thể đang cần." })).toBeVisible();
+    await expect(page.locator("#courses").getByRole("link", { name: "Gửi tình trạng cơ thể" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Chọn khóa và bắt đầu đúng điểm cơ thể đang cần." })).toHaveCount(0);
     await expect(page.getByRole("heading", { name: "Cơ thể là cỗ máy sống, phong thái là cách bạn cầm lái." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Đi để cơ thể được nghỉ, thở và bắt đầu lại." })).toBeVisible();
+    await expect(page.locator("#retreats").getByText("Thải độc nhịp sống", { exact: true })).toBeVisible();
+    await expect(page.locator("#retreats").getByRole("link", { name: "Hỏi lịch camp/retreat" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Một hệ sinh thái để cơ thể có nơi bắt đầu và nơi quay về." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Phòng hồi phục cơ thể" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Camp, Retreat & thải độc nhịp sống" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Nguyễn Thị Thu Nhanh" })).toBeVisible();
+    await expect(page.getByText("Người kiến tạo hệ sinh thái")).toBeVisible();
     await expect(page.getByAltText("Master Thu Nhanh trong phong cách Yoga Phong Thái toàn thân")).toBeVisible();
     await expect(page.getByRole("heading", { name: "Người học nói gì sau BODY TALK?" })).toBeVisible();
     await expect(page.getByText("Doanh nhân Mai Son")).toBeVisible();
@@ -25,7 +36,10 @@ test.describe("Yoga Phong Thai landing page", () => {
     await expect(page.getByText("Từ file feedback")).toHaveCount(0);
     await expect(page.getByRole("heading", { name: "Bạn đang phân vân điều gì?" })).toBeVisible();
     await expect(page.locator("#faq summary").filter({ hasText: "Tôi nên bắt đầu từ lộ trình nào?" })).toBeVisible();
+    await expect(page.locator("#faq summary").filter({ hasText: "Camp, retreat hoặc thải độc nhịp sống dành cho ai?" })).toBeVisible();
     await expect(page.getByText("Nhận tư vấn cá nhân")).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "Bắt đầu bằng việc hiểu đúng cơ thể của bạn." })).toBeVisible();
+    await expect(page.getByText("Tư vấn lộ trình hệ sinh thái")).toBeVisible();
 
     const footer = page.getByRole("contentinfo");
     await expect(footer.getByText("Sẵn sàng soi dáng và chọn lộ trình phù hợp?")).toBeVisible();
@@ -150,6 +164,7 @@ test.describe("Yoga Phong Thai landing page", () => {
   test("does not create horizontal overflow on desktop or mobile", async ({ page }) => {
     for (const viewport of [
       { width: 1280, height: 900 },
+      { width: 820, height: 1180 },
       { width: 390, height: 900 },
     ]) {
       await page.setViewportSize(viewport);

@@ -14,3 +14,4 @@ export { MethodSection } from "./method-section";
 export { MotionEffects } from "./motion-effects";
 export { PainSection } from "./pain-section";
 export { ProofSection } from "./proof-section";
+export { RetreatSection } from "./retreat-section";

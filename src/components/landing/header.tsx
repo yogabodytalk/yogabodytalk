@@ -26,12 +26,12 @@ export function Header() {
           <Image src="/brand-assets/body-talk-symbol-dark.svg" alt="" width={34} height={34} priority />
           <span>
             <strong className="block font-serif text-lg leading-none">Yoga Phong Thái</strong>
-            <small className="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-muted">
+            <small className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.1em] text-muted">
               BODY TALK
             </small>
           </span>
         </a>
-        <nav className="flex justify-center gap-6 text-sm font-bold text-muted max-[860px]:hidden" aria-label="Điều hướng chính">
+        <nav className="flex justify-center gap-6 text-sm font-semibold text-muted max-[860px]:hidden" aria-label="Điều hướng chính">
           {navItems.map((item) => (
             <a className="hover:text-sage" href={item.href} key={item.href}>
               {item.label}
@@ -39,10 +39,10 @@ export function Header() {
           ))}
         </nav>
         <a
-          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-5 font-extrabold leading-none text-white transition hover:-translate-y-px max-[860px]:hidden"
+          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-5 font-bold leading-none text-white transition hover:-translate-y-px max-[860px]:hidden"
           href="#contact"
         >
-          Đặt lịch
+          Soi dáng
         </a>
         <button
           className="hidden h-11 w-11 rounded-lg bg-surface text-sage max-[860px]:block"
@@ -61,7 +61,7 @@ export function Header() {
       >
         {navItems.map((item) => (
           <a
-            className="rounded-lg bg-surface px-3.5 py-3 font-extrabold text-sage"
+            className="rounded-lg bg-surface px-3.5 py-3 font-semibold text-sage"
             href={item.href}
             key={item.href}
             onClick={() => setMenuOpen(false)}

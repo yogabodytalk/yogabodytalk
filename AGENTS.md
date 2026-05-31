@@ -9,6 +9,7 @@
 - AG Kit is installed at `.agent/`.
 - For implementation, debugging, review, planning, or UI/design tasks, first inspect `.agent/ARCHITECTURE.md`, then inspect the relevant `.agent/agents/<agent>.md`.
 - Load only the relevant `.agent/skills/<skill>/SKILL.md` files referenced by the selected agent; do not bulk-load all skills.
+- When the user types `design-taste`, `$design-taste`, `taste-skill`, or asks for a substantial UI redesign, load `.agent/skills/design-taste/SKILL.md` before editing UI. The repo-local skill overrides any global `design-taste` guidance for BODY TALK.
 - Prefer these mappings:
   - Web/React/Next UI: `.agent/agents/frontend-specialist.md`
   - Bug/root-cause debugging: `.agent/agents/debugger.md`
