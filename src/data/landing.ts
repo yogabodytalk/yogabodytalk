@@ -176,6 +176,35 @@ export const learningTracks = [
   { count: "3.968K", title: "Thân - Tâm - Trí 90 ngày", body: "Hành trình chuyên sâu kết nối luyện tập, thói quen sống và nội lực.", status: "Lựa chọn tối ưu", cta: "Chọn lộ trình 90 ngày", muted: false },
 ] as const;
 
+export const videoCoursePreview = {
+  eyebrow: "Bài học video đầu tiên",
+  status: "Đang biên soạn",
+  title: "Module mở đầu: Hơi thở mở ngực",
+  duration: "Sắp cập nhật",
+  body: "Khung xem trước cho bài hướng dẫn thở, mở ngực và nhận diện trục cơ thể. Video sẽ được cập nhật khi giáo trình hoàn tất.",
+} as const;
+
+export const videoCoursePlaceholders = [
+  {
+    status: "Sắp mở",
+    title: "Hơi thở",
+    duration: "Sắp cập nhật",
+    body: "Các bài ngắn giúp đưa nhịp thở sâu trở lại và làm mềm vùng cổ vai ngực.",
+  },
+  {
+    status: "Sắp mở",
+    title: "Chỉnh dáng",
+    duration: "Sắp cập nhật",
+    body: "Chuỗi hướng dẫn theo từng vùng: cổ, vai, cột sống, hông và dáng đứng.",
+  },
+  {
+    status: "Sắp mở",
+    title: "Thân - Tâm - Trí",
+    duration: "Sắp cập nhật",
+    body: "Tài nguyên đồng hành cho nhịp sống, thiền định, dinh dưỡng và nội lực.",
+  },
+] as const;
+
 export const proofItems = [
   {
     src: "/docs/z7710226061539_d0a5964d9f9d45a445fc3abe02c65b0f.jpg",

@@ -13,6 +13,15 @@ test.describe("Yoga Phong Thai landing page", () => {
     await expect(page.getByRole("heading", { name: "Chọn khóa theo điểm cơ thể đang cần." })).toBeVisible();
     await expect(page.locator("#courses").getByRole("link", { name: "Gửi tình trạng cơ thể" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Chọn khóa và bắt đầu đúng điểm cơ thể đang cần." })).toHaveCount(0);
+    await expect(page.locator("#videos").getByRole("heading", { name: "Video khóa học đang chuẩn bị." })).toBeVisible();
+    await expect(page.locator("#videos").getByText("Module mở đầu: Hơi thở mở ngực")).toBeVisible();
+    await expect(page.locator("#videos [data-video-placeholder]")).toHaveCount(4);
+    await expect(page.locator("#videos video")).toHaveCount(0);
+    await expect(page.locator("#videos iframe")).toHaveCount(0);
+    await expect(page.locator("#videos embed")).toHaveCount(0);
+    await expect(page.locator("#videos").getByRole("link", { name: "Gửi tình trạng để được gợi ý" })).toHaveAttribute("href", "#contact");
+    await expect(page.locator("#videos").getByRole("link", { name: "Nhận thông báo khi mở video" })).toHaveAttribute("href", "#contact");
+    await expect(page.locator("#videos").getByText(/Xem ngay|Phát video|Play|Watch now|Học thử miễn phí|Vào học|Mở bài học|Đăng nhập để xem/i)).toHaveCount(0);
     await expect(page.getByRole("heading", { name: "Cơ thể là cỗ máy sống, phong thái là cách bạn cầm lái." })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Đi để cơ thể được nghỉ, thở và bắt đầu lại." })).toBeVisible();
     await expect(page.locator("#retreats").getByText("Thải độc nhịp sống", { exact: true })).toBeVisible();
@@ -140,6 +149,30 @@ test.describe("Yoga Phong Thai landing page", () => {
     expect(metrics.scrollWidth).toBeGreaterThan(metrics.clientWidth + 40);
     expect(metrics.secondCardLeft).toBeLessThan(metrics.clientWidth);
     expect(metrics.badgeTop).toBeGreaterThanOrEqual(metrics.scrollerTop);
+  });
+
+  test("shows video placeholders without real playable media", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto("/#videos");
+
+    await expect(page.getByText("Vuốt để xem 3 video sắp mở")).toBeVisible();
+
+    const order = await page.evaluate(() => {
+      const courses = document.querySelector("#courses")?.getBoundingClientRect().top ?? 0;
+      const videos = document.querySelector("#videos")?.getBoundingClientRect().top ?? 0;
+      const journey = document.querySelector("#journey")?.getBoundingClientRect().top ?? 0;
+
+      return { courses, videos, journey };
+    });
+
+    expect(order.courses).toBeLessThan(order.videos);
+    expect(order.videos).toBeLessThan(order.journey);
+
+    const videoSection = page.locator("#videos");
+    await expect(videoSection.locator("[data-video-placeholder]")).toHaveCount(4);
+    await expect(videoSection.locator("[data-play-mark] svg")).toHaveCount(4);
+    await expect(videoSection.locator("video, iframe, embed")).toHaveCount(0);
+    await expect(videoSection.getByText(/youtube|vimeo/i)).toHaveCount(0);
   });
 
   test("validates lead form and builds the Zalo message", async ({ page, context }) => {

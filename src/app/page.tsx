@@ -15,6 +15,7 @@ import {
   PainSection,
   ProofSection,
   RetreatSection,
+  VideoCoursesSection,
 } from "@/components/landing";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         <PainSection />
         <MethodSection />
         <CoursesSection />
+        <VideoCoursesSection />
         <JourneySection />
         <RetreatSection />
         <ProofSection />
