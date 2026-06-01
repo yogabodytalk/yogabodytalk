@@ -230,12 +230,14 @@ export const testimonials = [
     quote:
       "Học được cách lắng nghe cơ thể và tìm thấy sự bình yên trong tâm hồn giữa muôn vàn áp lực thương trường.",
     image: "/testimonials/mai-son.png",
+    imageOrientation: "portrait",
   },
   {
     name: "Katherine Trinh",
     role: "60 tuổi · Mỹ · Học online qua Zoom",
     quote: "Chuyển đổi vóc dáng và cải thiện sức khỏe đáng kể nhờ học online qua Zoom.",
     image: "/testimonials/katherine-trinh.png",
+    imageOrientation: "landscape",
   },
 ] as const;
 

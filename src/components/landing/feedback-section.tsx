@@ -20,14 +20,18 @@ export function FeedbackSection() {
         <div className="grid gap-5 max-sm:flex max-sm:snap-x max-sm:overflow-x-auto max-sm:pb-3 max-sm:[scrollbar-width:none] max-sm:[&::-webkit-scrollbar]:hidden md:grid-cols-2">
           {testimonials.map((item, index) => (
             <figure
-              className="grid min-h-[280px] grid-cols-[88px_1fr] gap-5 rounded-lg border border-[rgba(113,121,113,0.24)] bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 max-sm:min-h-[260px] max-sm:w-[84vw] max-sm:shrink-0 max-sm:snap-center max-sm:grid-cols-1 max-sm:gap-4 max-sm:p-5 md:p-7 lg:grid-cols-[112px_1fr] lg:gap-6"
+              className="grid min-h-[280px] grid-cols-[minmax(118px,150px)_1fr] items-start gap-5 rounded-lg border border-[rgba(113,121,113,0.24)] bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 max-sm:min-h-[260px] max-sm:w-[84vw] max-sm:shrink-0 max-sm:snap-center max-sm:grid-cols-1 max-sm:gap-4 max-sm:p-5 md:p-7 lg:grid-cols-[minmax(136px,168px)_1fr] lg:gap-6"
               key={item.name}
               data-motion="rise"
               data-motion-delay={String(index * 110)}
             >
-              <div className="overflow-hidden rounded-lg border border-[rgba(113,121,113,0.2)] bg-surface max-sm:h-40">
+              <div
+                className={`flex w-full items-center justify-center overflow-hidden rounded-lg border border-[rgba(113,121,113,0.2)] bg-surface p-2 ${
+                  item.imageOrientation === "landscape" ? "aspect-[4/3]" : "aspect-[4/5] max-sm:aspect-[4/3]"
+                }`}
+              >
                 <img
-                  className="motion-image-soft h-full w-full object-cover"
+                  className="motion-image-soft h-full w-full rounded-md object-contain"
                   src={item.image}
                   alt={`Ảnh đại diện ${item.name}`}
                   loading="eager"
