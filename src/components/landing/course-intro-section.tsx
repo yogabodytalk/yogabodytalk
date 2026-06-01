@@ -5,9 +5,9 @@ export function CourseIntroSection() {
   return (
     <section className="bg-surface py-12 max-sm:py-8" aria-labelledby="course-hero-title">
       <div className={`${shell} grid items-center gap-8 max-sm:gap-6 md:grid-cols-[minmax(220px,340px)_1fr] md:gap-10 lg:grid-cols-[minmax(280px,440px)_1fr]`}>
-        <div className="relative mx-auto aspect-[9/16] w-full max-w-[440px] overflow-hidden rounded-xl border border-[rgba(114,121,113,0.32)] bg-white shadow-soft max-sm:aspect-[16/10] max-sm:max-w-none md:max-w-[340px] lg:max-w-[440px]" data-motion="scale">
+        <div className="relative mx-auto aspect-[9/16] w-full max-w-[440px] overflow-hidden rounded-xl border border-[rgba(114,121,113,0.32)] bg-white shadow-soft max-sm:max-w-[300px] md:max-w-[340px] lg:max-w-[440px]" data-motion="scale">
           <Image
-            className="motion-image-soft h-full w-full object-cover max-sm:object-top"
+            className="motion-image-soft h-full w-full object-cover"
             src="/landing-assets/yoga-phong-thai-landing-02-body-talk.webp"
             alt="Không gian học Yoga Phong Thái BODY TALK"
             width={1080}

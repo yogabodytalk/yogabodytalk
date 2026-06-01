@@ -6,7 +6,7 @@ export function MasterSection() {
     <section className={`${section} ${shell} grid items-center gap-8 md:grid-cols-[0.72fr_1fr] lg:grid-cols-[0.75fr_1fr] lg:gap-14`} id="master" aria-labelledby="master-title">
       <div className="relative mx-auto w-full max-w-[460px] overflow-hidden rounded-xl bg-surface md:max-w-none" data-motion="scale">
         <Image
-          className="motion-image-soft h-[min(72vw,320px)] w-full object-cover object-top shadow-soft md:h-[380px] lg:h-[520px]"
+          className="motion-image-soft h-[min(104vw,450px)] w-full object-cover object-top shadow-soft md:h-[430px] lg:h-[560px]"
           src="/anh-ghep/yoga-phong-thai-02.png"
           alt="Master Thu Nhanh BODY TALK"
           width={900}
