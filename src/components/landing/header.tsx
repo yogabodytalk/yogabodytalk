@@ -1,74 +1,69 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { BrandLockup } from "./brand-lockup";
 import { navItems } from "@/data/landing";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
-      <header
-        className={`sticky top-4 z-50 mx-auto grid w-[min(1200px,calc(100%_-_40px))] grid-cols-[auto_1fr_auto_auto] items-center gap-6 rounded-xl border border-[rgba(114,121,113,0.22)] bg-cream/90 px-4 py-3 shadow-[0_10px_28px_rgba(32,52,35,0.07)] backdrop-blur-md max-[860px]:grid-cols-[auto_auto] max-[860px]:justify-between ${
-          scrolled ? "shadow-[0_14px_34px_rgba(32,52,35,0.11)]" : ""
-        }`}
-      >
-        <a className="flex min-h-11 min-w-0 items-center gap-2.5" href="#top" aria-label="Yoga Phong Thái">
-          <Image src="/brand-assets/body-talk-symbol-dark.svg" alt="" width={34} height={34} priority />
-          <span>
-            <strong className="block font-serif text-lg leading-none">Yoga Phong Thái</strong>
-            <small className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.1em] text-muted">
-              BODY TALK
-            </small>
-          </span>
+      <header className="relative z-50 mx-auto grid w-[min(1180px,calc(100%_-_40px))] grid-cols-[auto_1fr_auto] items-center gap-8 py-5 max-[820px]:grid-cols-[auto_auto] max-[820px]:justify-between max-sm:w-[min(100%_-_20px,390px)] max-sm:py-3">
+        <a className="inline-flex min-h-10 items-center" href="#top" aria-label="BODY TALK by Yoga Phong Thái">
+          <BrandLockup priority />
         </a>
-        <nav className="flex justify-center gap-6 text-sm font-semibold text-muted max-[860px]:hidden" aria-label="Điều hướng chính">
+
+        <nav className="flex items-center justify-center gap-8 text-sm font-extrabold text-[#263b2e] max-[820px]:hidden" aria-label="Điều hướng chính">
           {navItems.map((item) => (
-            <a className="hover:text-sage" href={item.href} key={item.href}>
+            <a className="transition hover:text-[#285638]" href={item.href} key={`${item.href}-${item.label}`}>
               {item.label}
             </a>
           ))}
         </nav>
+
         <a
-          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sage px-5 font-bold leading-none text-white transition hover:-translate-y-px max-[860px]:hidden"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#143f2b] px-5 text-sm font-extrabold leading-none text-[#fff8e8] shadow-[0_16px_36px_rgba(20,63,43,0.18)] transition hover:-translate-y-px max-[820px]:hidden"
           href="#contact"
         >
-          Soi dáng
+          Chọn lộ trình
         </a>
+
         <button
-          className="hidden h-11 w-11 rounded-lg bg-surface text-sage max-[860px]:block"
+          className="hidden h-10 w-10 rounded-full border border-[#143f2b]/18 bg-[#fffaf1] text-[#143f2b] max-[820px]:grid max-[820px]:place-items-center"
           type="button"
           aria-label="Mở menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
         >
-          <span className="mx-auto my-[5px] block h-0.5 w-[18px] bg-current" />
-          <span className="mx-auto my-[5px] block h-0.5 w-[18px] bg-current" />
+          <span className="grid gap-1.5">
+            <span className="block h-0.5 w-5 bg-current" />
+            <span className="block h-0.5 w-5 bg-current" />
+          </span>
         </button>
       </header>
+
       <nav
-        className={`${menuOpen ? "grid" : "hidden"} fixed left-4 right-4 top-[78px] z-40 gap-2 rounded-xl border border-[rgba(114,121,113,0.32)] bg-cream/95 p-3.5 shadow-soft`}
+        className={`${menuOpen ? "grid" : "hidden"} fixed left-3 right-3 top-[64px] z-50 gap-2 rounded-2xl border border-[#143f2b]/16 bg-[#fffaf1]/96 p-3 shadow-[0_18px_54px_rgba(34,61,41,0.16)] backdrop-blur-md min-[821px]:hidden`}
         aria-label="Điều hướng di động"
       >
         {navItems.map((item) => (
           <a
-            className="rounded-lg bg-surface px-3.5 py-3 font-semibold text-sage"
+            className="rounded-xl bg-[#f6efdf] px-4 py-3 text-sm font-extrabold text-[#143f2b]"
             href={item.href}
-            key={item.href}
+            key={`${item.href}-${item.label}`}
             onClick={() => setMenuOpen(false)}
           >
             {item.label}
           </a>
         ))}
+        <a
+          className="rounded-xl bg-[#143f2b] px-4 py-3 text-center text-sm font-extrabold text-[#fff8e8]"
+          href="#contact"
+          onClick={() => setMenuOpen(false)}
+        >
+          Chọn lộ trình
+        </a>
       </nav>
     </>
   );

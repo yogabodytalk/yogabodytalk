@@ -1,9 +1,8 @@
 export const navItems = [
-  { label: "Phương pháp", href: "#method" },
-  { label: "Lộ trình", href: "#courses" },
-  { label: "Hành trình", href: "#journey" },
-  { label: "Camp/Retreat", href: "#retreats" },
-  { label: "Master", href: "#master" },
+  { label: "Hệ sinh thái", href: "#ecosystem" },
+  { label: "Thân", href: "#branches" },
+  { label: "Tâm", href: "#branches" },
+  { label: "Khóa học", href: "#courses" },
   { label: "Tư vấn", href: "#contact" },
 ] as const;
 
@@ -167,6 +166,165 @@ export const ecosystemOfferings = [
     kicker: "Duy trì",
     title: "Video, Body Meal & cộng đồng",
     body: "Tài nguyên học, gợi ý dinh dưỡng và cộng đồng giúp thói quen mới không bị đứt đoạn.",
+  },
+] as const;
+
+export const ecosystemMapItems = [
+  {
+    label: "Học",
+    icon: "book",
+    body: "Nền tảng, 30 ngày chỉnh dáng, 90 ngày Thân - Tâm - Trí.",
+  },
+  {
+    label: "Hồi phục",
+    icon: "heart",
+    body: "Thả lỏng, lắng nghe, chăm sóc cảm nhận cơ thể.",
+  },
+  {
+    label: "Trải nghiệm",
+    icon: "camp",
+    body: "Camp, retreat và reset nhịp sống.",
+  },
+  {
+    label: "Duy trì",
+    icon: "refresh",
+    body: "Video, Body Meal và cộng đồng.",
+  },
+] as const;
+
+export const careBranches = [
+  {
+    id: "than",
+    number: "01",
+    title: "Thân",
+    summary: "Chăm sóc cơ thể - Xây nền tảng sức khỏe",
+    tone: "dark",
+    icon: "body",
+    items: [
+      {
+        title: "Khóa học BODY TALK",
+        body: "Các chương trình Yoga Phong Thái bài bản cho mọi trình độ.",
+        image: "/bodytalk-match-assets/branch-course.webp",
+        icon: "book",
+      },
+      {
+        title: "Video tập luyện",
+        body: "Thư viện bài tập đa dạng, tập mọi lúc - mọi nơi.",
+        image: "/bodytalk-match-assets/branch-exercise.webp",
+        icon: "play",
+      },
+      {
+        title: "Video dinh dưỡng",
+        body: "Công thức và kiến thức dinh dưỡng thực tế, dễ áp dụng.",
+        image: "/bodytalk-match-assets/branch-nutrition.webp",
+        icon: "nutrition",
+      },
+      {
+        title: "Coaching 1:1: kế hoạch dinh dưỡng cá nhân",
+        body: "Lộ trình cá nhân hóa theo thể trạng, mục tiêu và thói quen sống.",
+        image: "/bodytalk-match-assets/branch-coaching.webp",
+        icon: "clipboard",
+      },
+      {
+        title: "Hồi phục cơ thể",
+        body: "Các phương pháp phục hồi giúp cơ thể cân bằng và tái tạo năng lượng.",
+        image: "/bodytalk-match-assets/branch-recovery.webp",
+        icon: "recovery",
+      },
+      {
+        title: "Rã cơ / thả lỏng cơ thể",
+        body: "Giảm căng cứng cơ, tăng độ linh hoạt và cảm giác nhẹ nhõm.",
+        image: "/bodytalk-match-assets/branch-release.webp",
+        icon: "release",
+      },
+      {
+        title: "Thải độc nhịp sống",
+        body: "Tối ưu thói quen, ăn uống, giấc ngủ để cơ thể thanh nhẹ mỗi ngày.",
+        image: "/bodytalk-match-assets/branch-reset.webp",
+        icon: "leaf",
+      },
+    ],
+  },
+  {
+    id: "tam",
+    number: "02",
+    title: "Tâm",
+    summary: "Nuôi dưỡng tâm trí - Sống an nhiên",
+    tone: "soft",
+    icon: "heart",
+    items: [
+      {
+        title: "Chuyến bếp chữa lành: Hạnh phúc tới từ nhà bếp",
+        body: "Học nấu ăn lành mạnh, kết nối và chữa lành qua từng bữa cơm.",
+        image: "/bodytalk-match-assets/branch-kitchen.webp",
+        icon: "kitchen",
+      },
+      {
+        title: "Chuyến thải độc nhịp sống",
+        body: "Retreat giúp bạn tạm dừng, thanh lọc và thiết lập lại nhịp sống.",
+        image: "/bodytalk-match-assets/branch-retreat.webp",
+        icon: "trees",
+      },
+      {
+        title: "Camp BODY TALK",
+        body: "Trải nghiệm cộng đồng - Yoga - Thiền - Kết nối và truyền cảm hứng.",
+        image: "/bodytalk-match-assets/branch-camp.webp",
+        icon: "camp",
+      },
+    ],
+  },
+  {
+    id: "tri",
+    number: "03",
+    title: "Trí sáng",
+    summary: "Hiểu cơ thể - soi rõ và duy trì lộ trình",
+    tone: "plain",
+    icon: "sparkles",
+    items: [
+      {
+        title: "Mục tiêu",
+        body: "Xác định điểm bắt đầu và nhịp học phù hợp.",
+        image: "/bodytalk-match-assets/branch-coaching.webp",
+        icon: "target",
+      },
+      {
+        title: "Soi tình trạng",
+        body: "Nhìn lại hơi thở, trục dáng, thói quen và năng lượng hiện tại.",
+        image: "/bodytalk-match-assets/branch-reset.webp",
+        icon: "scan",
+      },
+      {
+        title: "Lộ trình",
+        body: "Chọn đúng khóa học, camp hoặc tư vấn theo nhu cầu thật.",
+        image: "/bodytalk-match-assets/branch-retreat.webp",
+        icon: "route",
+      },
+      {
+        title: "Duy trì",
+        body: "Giữ nhịp chăm sóc bằng video, cộng đồng và follow-up.",
+        image: "/bodytalk-match-assets/branch-camp.webp",
+        icon: "refresh",
+      },
+    ],
+  },
+] as const;
+
+export const proofGallery = [
+  {
+    src: "/docs/z7710226061539_d0a5964d9f9d45a445fc3abe02c65b0f.jpg",
+    alt: "Tài liệu nền tảng BODY TALK",
+  },
+  {
+    src: "/docs/z7710226763217_e07956752ad176247bc2f37c4ea2c518.jpg",
+    alt: "Tài liệu lộ trình BODY TALK",
+  },
+  {
+    src: "/docs/z7710226376419_97422f5a7095c35533f071f5eedcd439.jpg",
+    alt: "Tài liệu chương trình BODY TALK",
+  },
+  {
+    src: "/testimonials/katherine-trinh.png",
+    alt: "Minh chứng học viên BODY TALK",
   },
 ] as const;
 

@@ -1,44 +1,28 @@
 import {
+  BranchSelectorSection,
   ContactSection,
-  CourseIntroSection,
   CoursesSection,
-  FaqSection,
-  FeedbackSection,
-  FloatingZaloLink,
+  EcosystemSection,
   Footer,
   Header,
   HeroSection,
-  JourneySection,
-  MasterSection,
-  MethodSection,
   MotionEffects,
-  PainSection,
   ProofSection,
-  RetreatSection,
-  VideoCoursesSection,
 } from "@/components/landing";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main id="top">
+      <main>
         <HeroSection />
-        <CourseIntroSection />
-        <PainSection />
-        <MethodSection />
+        <EcosystemSection />
+        <BranchSelectorSection />
         <CoursesSection />
-        <VideoCoursesSection />
-        <JourneySection />
-        <RetreatSection />
         <ProofSection />
-        <MasterSection />
-        <FeedbackSection />
-        <FaqSection />
         <ContactSection />
       </main>
       <Footer />
-      <FloatingZaloLink />
       <MotionEffects />
     </>
   );
