@@ -14,7 +14,7 @@ export function Header() {
           <BrandLockup priority />
         </a>
 
-        <nav className="flex items-center justify-center gap-8 text-sm font-extrabold text-[#263b2e] max-[820px]:hidden" aria-label="Điều hướng chính">
+        <nav className="flex items-center justify-center gap-8 text-[15px] font-extrabold text-[#263b2e] max-[820px]:hidden" aria-label="Điều hướng chính">
           {navItems.map((item) => (
             <a className="transition hover:text-[#285638]" href={item.href} key={`${item.href}-${item.label}`}>
               {item.label}
@@ -23,7 +23,7 @@ export function Header() {
         </nav>
 
         <a
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#143f2b] px-5 text-sm font-extrabold leading-none text-[#fff8e8] shadow-[0_16px_36px_rgba(20,63,43,0.18)] transition hover:-translate-y-px max-[820px]:hidden"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#143f2b] px-5 text-[15px] font-extrabold leading-none text-[#fff8e8] shadow-[0_16px_36px_rgba(20,63,43,0.18)] transition hover:-translate-y-px max-[820px]:hidden"
           href="#contact"
         >
           Chọn lộ trình
@@ -49,7 +49,7 @@ export function Header() {
       >
         {navItems.map((item) => (
           <a
-            className="rounded-xl bg-[#f6efdf] px-4 py-3 text-sm font-extrabold text-[#143f2b]"
+            className="rounded-xl bg-[#f6efdf] px-4 py-3 text-base font-extrabold text-[#143f2b]"
             href={item.href}
             key={`${item.href}-${item.label}`}
             onClick={() => setMenuOpen(false)}
@@ -58,7 +58,7 @@ export function Header() {
           </a>
         ))}
         <a
-          className="rounded-xl bg-[#143f2b] px-4 py-3 text-center text-sm font-extrabold text-[#fff8e8]"
+          className="rounded-xl bg-[#143f2b] px-4 py-3 text-center text-base font-extrabold text-[#fff8e8]"
           href="#contact"
           onClick={() => setMenuOpen(false)}
         >

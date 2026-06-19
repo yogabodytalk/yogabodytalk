@@ -6,8 +6,9 @@ test.describe("BODY TALK approved landing page", () => {
 
     await expect(page.getByRole("heading", { name: /Thân khỏe\.\s*Tâm an\.\s*Trí sáng\./ })).toBeVisible();
     await expect(page.getByRole("link", { name: "Khám phá hệ sinh thái" })).toHaveAttribute("href", "#ecosystem");
-    await expect(page.locator("header img[alt='BODY TALK - Understand Your Body']")).toHaveAttribute("src", /body-talk-logo-lockup\.svg/);
-    await expect(page.locator("footer img[alt='BODY TALK - Understand Your Body']")).toHaveAttribute("src", /body-talk-logo-lockup\.svg/);
+    await expect(page.locator("header img[alt='BODY TALK - Understand Your Body']")).toHaveAttribute("src", /body-talk-logo-mark\.png/);
+    await expect(page.locator("footer img[alt='BODY TALK - Understand Your Body']")).toHaveAttribute("src", /body-talk-logo-full\.png/);
+    await expect(page.locator("link[rel='icon']")).toHaveAttribute("href", "/brand-assets/body-talk-logo-favicon.png");
     await expect(page.getByRole("heading", { name: "Một hệ sinh thái, không phải một khóa học đơn lẻ." })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Chọn nhánh chăm sóc" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Học theo lộ trình, không xem rời rạc." })).toBeVisible();

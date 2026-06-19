@@ -10,7 +10,7 @@ export function HeroSection() {
       aria-labelledby="hero-title"
     >
       <div className="relative z-10 pb-10 max-lg:pb-0" data-motion="rise">
-        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.14em] text-[#b9842c] max-sm:mb-3 max-sm:text-[10px]">
+        <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.14em] text-[#b9842c] max-sm:mb-3 max-sm:text-xs">
           Yoga Phong Thái
         </p>
         <h1
@@ -23,19 +23,19 @@ export function HeroSection() {
           <br />
           Trí sáng.
         </h1>
-        <p className="mt-7 max-w-[570px] text-[17px] font-semibold leading-8 text-[#404b42] max-sm:mt-5 max-sm:text-sm max-sm:leading-6">
+        <p className="mt-7 max-w-[600px] text-[19px] font-semibold leading-9 text-[#404b42] max-sm:mt-5 max-sm:text-base max-sm:leading-7">
           BODY TALK là hệ sinh thái giúp bạn đọc lại tín hiệu cơ thể, mở hơi thở,
           cân chỉnh trục dáng và chọn đúng nhịp chăm sóc để phong thái trở thành cảm giác tự nhiên.
         </p>
         <div className="mt-8 flex flex-wrap gap-3 max-sm:mt-5">
           <a
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#143f2b] px-6 text-sm font-extrabold text-[#fff8e8] shadow-[0_18px_40px_rgba(20,63,43,0.18)] transition hover:-translate-y-px max-sm:w-full"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#143f2b] px-6 text-base font-extrabold text-[#fff8e8] shadow-[0_18px_40px_rgba(20,63,43,0.18)] transition hover:-translate-y-px max-sm:w-full"
             href="#ecosystem"
           >
             Khám phá hệ sinh thái
           </a>
           <a
-            className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#143f2b]/22 bg-[#fffaf1]/74 px-6 text-sm font-extrabold text-[#143f2b] transition hover:-translate-y-px max-sm:w-full"
+            className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#143f2b]/22 bg-[#fffaf1]/74 px-6 text-base font-extrabold text-[#143f2b] transition hover:-translate-y-px max-sm:w-full"
             href="#contact"
           >
             Chọn lộ trình của tôi

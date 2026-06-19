@@ -1,17 +1,32 @@
 import Image from "next/image";
 
 export function BrandLockup({ priority = false, size = "header" }: { priority?: boolean; size?: "header" | "footer" }) {
-  const widthClass = size === "footer" ? "w-[128px] md:w-[150px]" : "w-[88px] max-sm:w-[78px]";
+  if (size === "footer") {
+    return (
+      <span className="inline-flex overflow-hidden rounded-xl bg-[#fffaf1] p-1.5 shadow-[0_14px_34px_rgba(0,0,0,0.16)] ring-1 ring-[#fff8e8]/24">
+        <Image
+          className="block h-auto w-[118px] md:w-[140px]"
+          src="/brand-assets/body-talk-logo-full.png"
+          alt="BODY TALK - Understand Your Body"
+          width={487}
+          height={560}
+          loading="eager"
+          sizes="(max-width: 767px) 118px, 140px"
+        />
+      </span>
+    );
+  }
 
   return (
-    <span className="inline-flex overflow-hidden rounded-md bg-white shadow-[0_8px_20px_rgba(34,61,41,0.06)] ring-1 ring-[#143f2b]/8">
+    <span className="inline-flex overflow-hidden rounded-xl bg-[#003930] shadow-[0_10px_24px_rgba(20,63,43,0.14)] ring-1 ring-[#143f2b]/10">
       <Image
-        className={`block h-auto ${widthClass}`}
-        src="/brand-assets/body-talk-logo-lockup.svg"
+        className="block h-12 w-12 object-cover max-sm:h-10 max-sm:w-10"
+        src="/brand-assets/body-talk-logo-mark.png"
         alt="BODY TALK - Understand Your Body"
-        width={1200}
-        height={900}
+        width={512}
+        height={512}
         priority={priority}
+        sizes="48px"
       />
     </span>
   );

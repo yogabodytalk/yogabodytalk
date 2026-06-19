@@ -8,7 +8,7 @@ export function Footer() {
           <a className="inline-flex" href="#top" aria-label="Về đầu trang BODY TALK">
             <BrandLockup size="footer" />
           </a>
-          <p className="mt-4 max-w-sm text-sm font-semibold leading-7">
+          <p className="mt-4 max-w-sm text-[15px] font-semibold leading-7">
             Hệ sinh thái chăm sóc thân - tâm - trí dành cho người Việt hiện đại.
           </p>
         </div>
@@ -16,8 +16,8 @@ export function Footer() {
         <FooterColumn title="Khám phá" lines={["Hệ sinh thái", "Thân", "Tâm", "Khóa học"]} />
         <FooterColumn title="Hỗ trợ" lines={["Câu hỏi thường gặp", "Chính sách & điều khoản", "Liên hệ"]} />
         <address className="not-italic">
-          <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.12em] text-[#e7c981]">Liên hệ</p>
-          <p className="text-sm font-semibold leading-7">
+          <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.12em] text-[#e7c981]">Liên hệ</p>
+          <p className="text-[15px] font-semibold leading-7">
             Zalo:{" "}
             <a className="text-[#fff8e8]" href="tel:0962895314">
               0962 895 314
@@ -36,8 +36,8 @@ export function Footer() {
 function FooterColumn({ lines, title }: { lines: string[]; title: string }) {
   return (
     <nav aria-label={title}>
-      <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.12em] text-[#e7c981]">{title}</p>
-      <ul className="grid gap-2 p-0 text-sm font-semibold leading-6">
+      <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.12em] text-[#e7c981]">{title}</p>
+      <ul className="grid gap-2 p-0 text-[15px] font-semibold leading-7">
         {lines.map((line) => (
           <li key={line}>{line}</li>
         ))}

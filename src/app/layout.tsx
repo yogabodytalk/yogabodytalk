@@ -45,7 +45,8 @@ export const metadata: Metadata = {
     images: [socialImage],
   },
   icons: {
-    icon: "/brand-assets/body-talk-symbol-dark.svg",
+    icon: "/brand-assets/body-talk-logo-favicon.png",
+    apple: "/brand-assets/body-talk-logo-favicon.png",
   },
 };
 

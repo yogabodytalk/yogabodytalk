@@ -85,7 +85,7 @@ export function BranchSelectorSection() {
     <section className="bg-[#fbf7ee] py-16 max-sm:py-10" id="branches" aria-labelledby="branches-title">
       <div className={shell}>
         <header className="text-center" data-motion="rise">
-          <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.14em] text-[#b9842c]">
+          <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-[#b9842c]">
             Hệ sinh thái BODY TALK
           </p>
           <h2 id="branches-title" className="font-serif text-[clamp(2rem,3vw,3rem)] font-semibold leading-[1.1] text-[#143f2b]">
@@ -127,7 +127,7 @@ export function BranchSelectorSection() {
                       <span className="font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-semibold leading-none">{branch.title}</span>
                       <span className="font-serif text-base font-semibold opacity-55 max-sm:hidden">{branch.number}</span>
                     </span>
-                    <span className="mt-1 block text-sm font-bold leading-5 opacity-78 max-sm:text-xs">{branch.summary}</span>
+                    <span className="mt-1 block text-[15px] font-bold leading-6 opacity-78 max-sm:text-[13px] max-sm:leading-5">{branch.summary}</span>
                   </span>
                   <span className="grid h-9 w-9 place-items-center rounded-full bg-white/92 text-[#143f2b] shadow-[0_8px_20px_rgba(20,63,43,0.08)] max-sm:h-8 max-sm:w-8">
                     {isOpen ? <ChevronUp aria-hidden="true" size={18} strokeWidth={2.4} /> : <ChevronDown aria-hidden="true" size={18} strokeWidth={2.4} />}
@@ -165,8 +165,8 @@ export function BranchSelectorSection() {
                               <RowIcon name={item.icon} />
                             </span>
                             <span className="min-w-0">
-                              <span className="block text-base font-extrabold leading-tight text-[#143f2b] max-sm:text-[13px]">{item.title}</span>
-                              <span className="mt-1 block text-sm font-semibold leading-5 text-[#62665e] max-sm:line-clamp-2 max-sm:text-[11.5px] max-sm:leading-[1.35]">
+                              <span className="block text-lg font-extrabold leading-tight text-[#143f2b] max-sm:text-[15px]">{item.title}</span>
+                              <span className="mt-1 block text-base font-semibold leading-6 text-[#62665e] max-sm:line-clamp-2 max-sm:text-[13.5px] max-sm:leading-5">
                                 {item.body}
                               </span>
                             </span>
@@ -185,19 +185,19 @@ export function BranchSelectorSection() {
                               <div className="grid gap-3 md:grid-cols-3">
                                 {detailItems.map((detail) => (
                                   <div className="rounded-lg bg-[#fffaf1]/82 p-3" key={detail.label}>
-                                    <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#b9842c]">{detail.label}</p>
-                                    <p className="mt-2 text-sm font-semibold leading-6 text-[#4f594f] max-sm:text-xs max-sm:leading-5">
+                                    <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[#b9842c]">{detail.label}</p>
+                                    <p className="mt-2 text-[15px] font-semibold leading-7 text-[#4f594f] max-sm:text-[13.5px] max-sm:leading-6">
                                       {detail.body}
                                     </p>
                                   </div>
                                 ))}
                               </div>
                               <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[#d7bd84]/35 pt-3">
-                                <p className="text-xs font-bold leading-5 text-[#62665e]">
+                                <p className="text-sm font-bold leading-6 text-[#62665e]">
                                   Khu vực này đã sẵn sàng để bổ sung module, tài liệu, lịch mở hoặc quyền lợi đi kèm.
                                 </p>
                                 <a
-                                  className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#143f2b] px-4 text-xs font-extrabold text-[#fff8e8] transition hover:-translate-y-px"
+                                  className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#143f2b] px-4 text-sm font-extrabold text-[#fff8e8] transition hover:-translate-y-px"
                                   href="#contact"
                                 >
                                   Trao đổi lộ trình

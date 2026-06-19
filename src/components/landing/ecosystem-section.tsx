@@ -32,7 +32,7 @@ export function EcosystemSection() {
       <Sprout className="pointer-events-none absolute left-6 top-[46%] hidden h-28 w-28 -rotate-12 text-[#9faf83]/40 lg:block" aria-hidden="true" strokeWidth={1.1} />
       <Leaf className="pointer-events-none absolute bottom-12 right-8 hidden h-24 w-24 rotate-12 text-[#9faf83]/38 lg:block" aria-hidden="true" strokeWidth={1.1} />
       <div className={shell}>
-        <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.14em] text-[#b9842c]" data-motion="fade">
+        <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-[#b9842c]" data-motion="fade">
           Bản đồ hệ sinh thái BODY TALK
         </p>
         <h2
@@ -42,7 +42,7 @@ export function EcosystemSection() {
         >
           Một hệ sinh thái, không phải một khóa học đơn lẻ.
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-[15px] font-semibold leading-7 text-[#62665e] max-sm:text-left max-sm:text-sm max-sm:leading-6" data-motion="rise" data-motion-delay="80">
+        <p className="mx-auto mt-4 max-w-[720px] text-[17px] font-semibold leading-8 text-[#62665e] max-sm:text-left max-sm:text-base max-sm:leading-7" data-motion="rise" data-motion-delay="80">
           Người xem có thể bắt đầu từ học nền tảng, chỉnh dáng chuyên sâu, phục hồi,
           video duy trì hoặc camp/retreat tùy tình trạng hiện tại.
         </p>
@@ -63,7 +63,7 @@ export function EcosystemSection() {
               <h3 className="mx-auto max-w-[12rem] font-serif text-[clamp(1.8rem,3vw,2.1rem)] font-semibold leading-[1.08]">
                 Ngôi nhà cuộc đời
               </h3>
-              <p className="mt-4 text-xs font-bold leading-6 text-[#fff8e8]/80">
+              <p className="mt-4 text-sm font-bold leading-6 text-[#fff8e8]/80">
                 Sức khỏe · Nội tâm
                 <br />
                 Mối quan hệ · Tài chính
@@ -91,7 +91,7 @@ function EcosystemCard({ body, icon, label }: { body: string; icon: string; labe
         <Icon aria-hidden="true" size={21} strokeWidth={1.8} />
       </span>
       <h3 className="font-serif text-2xl font-semibold leading-tight text-[#285638]">{label}</h3>
-      <p className="mt-2 text-sm font-semibold leading-6 text-[#62665e]">{body}</p>
+      <p className="mt-2 text-[15px] font-semibold leading-7 text-[#62665e] max-sm:text-base">{body}</p>
     </article>
   );
 }
